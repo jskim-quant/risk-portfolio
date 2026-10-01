@@ -1,0 +1,83 @@
+{
+  "name": "Illustrative premium and reserve underwriting-risk SCR component (Standard Formula)",
+  "basis_date": "2026-09-30",
+  "currency": "EUR million",
+  "unit": "million",
+  "volume": 380.0,
+  "sigma": 0.07311040478700712,
+  "scr": 83.34586145718811,
+  "segments": [
+    {
+      "segment": 1,
+      "premium_volume": 123.0,
+      "reserve_volume": 75,
+      "volume": 198.0,
+      "premium_sigma": 0.08000000000000002,
+      "reserve_sigma": 0.09,
+      "sigma": 0.07298077661781362,
+      "weighted_sigma": 14.450193770327097,
+      "standalone_scr": 43.35058131098129
+    },
+    {
+      "segment": 5,
+      "premium_volume": 72.0,
+      "reserve_volume": 110,
+      "volume": 182.0,
+      "premium_sigma": 0.11200000000000002,
+      "reserve_sigma": 0.11,
+      "sigma": 0.09658654540634624,
+      "weighted_sigma": 17.578751263955017,
+      "standalone_scr": 52.73625379186505
+    }
+  ],
+  "correlation": [
+    [
+      1.0,
+      0.5
+    ],
+    [
+      0.5,
+      1.0
+    ]
+  ],
+  "input_status": "All financial inputs assumed; separate illustrative regulatory case",
+  "scope": "illustrative premium and reserve underwriting-risk SCR component (Standard Formula, segments 1 and 5); not a total SCR",
+  "not_included": [
+    "catastrophe risk",
+    "lapse risk",
+    "other non-life underwriting segments",
+    "module aggregation",
+    "market risk",
+    "counterparty default risk",
+    "operational risk",
+    "loss-absorbing capacity of technical provisions and deferred taxes",
+    "SCR adjustments and add-ons"
+  ],
+  "inputs": [
+    {
+      "segment": 1,
+      "next_12m_net_earned": 100,
+      "last_12m_net_earned": 110,
+      "future_existing_pv": 8,
+      "future_new_short_pv": 2,
+      "future_new_long_pv": 10,
+      "gross_claims_best_estimate": 90,
+      "eligible_recoverables": 15
+    },
+    {
+      "segment": 5,
+      "next_12m_net_earned": 60,
+      "last_12m_net_earned": 55,
+      "future_existing_pv": 5,
+      "future_new_short_pv": 1,
+      "future_new_long_pv": 20,
+      "gross_claims_best_estimate": 130,
+      "eligible_recoverables": 20
+    }
+  ],
+  "sensitivities": {
+    "Baseline": 83.34586145718811,
+    "Forward premiums +20%": 88.12725304953923,
+    "Gross claims BE +20%": 93.82731797546901
+  }
+}

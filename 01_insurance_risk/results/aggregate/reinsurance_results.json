@@ -1,0 +1,86 @@
+{
+  "currency": "EUR",
+  "horizon": "one policy-year",
+  "stress": [
+    {
+      "scenario": "Baseline",
+      "treaty": "QS 25%",
+      "gross_var": 6247.397607333195,
+      "net_var": 4685.5482054998965,
+      "gross_es": 45791.505567921624,
+      "net_es": 34343.62917594122
+    },
+    {
+      "scenario": "Baseline",
+      "treaty": "XoL 5000",
+      "gross_var": 6247.397607333195,
+      "net_var": 5000.0,
+      "gross_es": 45791.505567921624,
+      "net_es": 5388.060004551909
+    },
+    {
+      "scenario": "Frequency +50%",
+      "treaty": "QS 25%",
+      "gross_var": 8126.256810257834,
+      "net_var": 6094.692607693376,
+      "gross_es": 33031.89264469246,
+      "net_es": 24773.919483519352
+    },
+    {
+      "scenario": "Frequency +50%",
+      "treaty": "XoL 5000",
+      "gross_var": 8126.256810257834,
+      "net_var": 5000.0,
+      "gross_es": 33031.89264469246,
+      "net_es": 5557.339848301258
+    },
+    {
+      "scenario": "Severity +50%",
+      "treaty": "QS 25%",
+      "gross_var": 9371.096410999793,
+      "net_var": 7028.322308249844,
+      "gross_es": 68687.25835188244,
+      "net_es": 51515.44376391183
+    },
+    {
+      "scenario": "Severity +50%",
+      "treaty": "XoL 5000",
+      "gross_var": 9371.096410999793,
+      "net_var": 5000.0,
+      "gross_es": 68687.25835188244,
+      "net_es": 5475.206080475527
+    },
+    {
+      "scenario": "Combined",
+      "treaty": "QS 25%",
+      "gross_var": 12189.385215386752,
+      "net_var": 9142.038911540063,
+      "gross_es": 49547.838967038704,
+      "net_es": 37160.87922527902
+    },
+    {
+      "scenario": "Combined",
+      "treaty": "XoL 5000",
+      "gross_var": 12189.385215386752,
+      "net_var": 5789.296823311776,
+      "gross_es": 49547.838967038704,
+      "net_es": 7630.402689459512
+    },
+    {
+      "scenario": "Tail shape 0.95",
+      "treaty": "QS 25%",
+      "gross_var": 6247.397607333195,
+      "net_var": 4685.5482054998965,
+      "gross_es": 70264.42100359897,
+      "net_es": 52698.31575269922
+    },
+    {
+      "scenario": "Tail shape 0.95",
+      "treaty": "XoL 5000",
+      "gross_var": 6247.397607333195,
+      "net_var": 5000.0,
+      "gross_es": 70264.42100359897,
+      "net_es": 5388.060004551909
+    }
+  ]
+}

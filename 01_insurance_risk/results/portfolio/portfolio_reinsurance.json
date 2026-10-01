@@ -1,0 +1,76 @@
+{
+  "unit": "USD millions",
+  "note": "retained losses before any reinsurance premium",
+  "treaties": {
+    "quota_share_share": 0.25,
+    "stop_loss": "200% xs 100% of line premium, per line"
+  },
+  "results": [
+    {
+      "dependence": "Gaussian copula",
+      "treaty": "Gross",
+      "VaR995": 62.202243603101905,
+      "ES995": 82.7404719391015,
+      "expected_ceded": 0.0,
+      "VaR_relief": 0.0,
+      "ES_relief": 0.0,
+      "D_VaR": 0.3524053463857397,
+      "D_K": 0.4995433571931315
+    },
+    {
+      "dependence": "Gaussian copula",
+      "treaty": "Quota share 25%",
+      "VaR995": 46.65168270232642,
+      "ES995": 62.055353954326115,
+      "expected_ceded": 7.072850785823299,
+      "VaR_relief": 15.550560900775483,
+      "ES_relief": 20.68511798477538,
+      "D_VaR": 0.3524053463857396,
+      "D_K": 0.4995433571931315
+    },
+    {
+      "dependence": "Gaussian copula",
+      "treaty": "Stop-loss 200% xs 100% premium",
+      "VaR995": 40.005680035597756,
+      "ES995": 58.89439438618794,
+      "expected_ceded": 2.2067605688008816,
+      "VaR_relief": 22.19656356750415,
+      "ES_relief": 23.846077552913556,
+      "D_VaR": 0.16564590113419375,
+      "D_K": 0.3632732614174342
+    },
+    {
+      "dependence": "Independence benchmark",
+      "treaty": "Gross",
+      "VaR995": 60.30428681727546,
+      "ES995": 79.65317309323045,
+      "expected_ceded": 0.0,
+      "VaR_relief": 0.0,
+      "ES_relief": 0.0,
+      "D_VaR": 0.3727749440631609,
+      "D_K": 0.5280369933729454
+    },
+    {
+      "dependence": "Independence benchmark",
+      "treaty": "Quota share 25%",
+      "VaR995": 45.22821511295659,
+      "ES995": 59.73987981992284,
+      "expected_ceded": 7.067499070679103,
+      "VaR_relief": 15.07607170431887,
+      "ES_relief": 19.91329327330761,
+      "D_VaR": 0.3727749440631609,
+      "D_K": 0.5280369933729454
+    },
+    {
+      "dependence": "Independence benchmark",
+      "treaty": "Stop-loss 200% xs 100% premium",
+      "VaR995": 38.88458980874396,
+      "ES995": 56.50938493823733,
+      "expected_ceded": 2.202153989506216,
+      "VaR_relief": 21.419697008531497,
+      "ES_relief": 23.143788154993118,
+      "D_VaR": 0.19293164132212282,
+      "D_K": 0.4203767165423905
+    }
+  ]
+}

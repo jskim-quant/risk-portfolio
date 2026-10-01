@@ -1,0 +1,12 @@
+{
+  "lambda_freq": 0.10239746122016678,
+  "r_freq": 0.7569001802967591,
+  "threshold": 16793.704399999988,
+  "alpha": 0.9899771012425391,
+  "mu_body": 6.8229552248309595,
+  "sigma_body": 1.0829880227596727,
+  "xi_gpd": 0.851939145933323,
+  "sigma_gpd": 17465.060318719035,
+  "freq_model": "NB2 (exposure-adjusted)",
+  "severity_model": "Truncated-Lognormal body + GPD tail (proper POT splice)"
+}

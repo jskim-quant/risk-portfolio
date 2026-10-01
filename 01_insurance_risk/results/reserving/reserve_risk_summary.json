@@ -1,0 +1,126 @@
+{
+  "line": "wkcomp",
+  "currency": "USD '000s",
+  "valuation_year": 2007,
+  "method": "Mack (1993) distribution-free Chain-Ladder, sigma_interpolation=mack",
+  "scope": "ultimate runoff uncertainty, not the Solvency II one-year reserve risk",
+  "total_reserve": 3267680.6690445933,
+  "total_process_std": 65021.13329159467,
+  "total_parameter_std": 79072.2581636426,
+  "total_std_error": 102372.70039234612,
+  "total_cv": 0.03132885699699595,
+  "lognormal_pi": {
+    "mu": 14.99910050773341,
+    "sigma": 0.031321173784218975,
+    "q0.75": 3335810.7739500985,
+    "q0.9": 3399844.3428758094,
+    "q0.95": 3438752.2792449635,
+    "q0.995": 3540499.953670372
+  },
+  "backtest": [
+    {
+      "valuation_year": 2007,
+      "final_calendar_year": 2016,
+      "max_runoff_years": 9,
+      "projected_unpaid": 3267680.6690445933,
+      "actual_unpaid": 3434416.0,
+      "lower95": 3071609.14946317,
+      "upper95": 3472859.5150520834,
+      "covered": true
+    },
+    {
+      "valuation_year": 2008,
+      "final_calendar_year": 2016,
+      "max_runoff_years": 8,
+      "projected_unpaid": 2062363.6206070841,
+      "actual_unpaid": 2126739.0,
+      "lower95": 1930467.1861479366,
+      "upper95": 2200810.008188124,
+      "covered": true
+    },
+    {
+      "valuation_year": 2009,
+      "final_calendar_year": 2016,
+      "max_runoff_years": 7,
+      "projected_unpaid": 1288657.5404445424,
+      "actual_unpaid": 1354048.0,
+      "lower95": 1185412.295862185,
+      "upper95": 1398407.8670533134,
+      "covered": true
+    },
+    {
+      "valuation_year": 2010,
+      "final_calendar_year": 2016,
+      "max_runoff_years": 6,
+      "projected_unpaid": 825201.5169761353,
+      "actual_unpaid": 853636.0,
+      "lower95": 753627.9445978998,
+      "upper95": 901682.7473505944,
+      "covered": true
+    }
+  ],
+  "per_line": [
+    {
+      "line": "ppauto",
+      "companies": 121,
+      "reserve": 18723967.601229113,
+      "std_error": 378494.01325670286,
+      "cv": 0.020214412955502928,
+      "premium_latest_ay": 24142223.0,
+      "reserve_to_premium": 0.7755693252120616,
+      "negative_paid_increments": 0
+    },
+    {
+      "line": "comauto",
+      "companies": 137,
+      "reserve": 2064726.905860055,
+      "std_error": 75432.45025150967,
+      "cv": 0.036533863164866606,
+      "premium_latest_ay": 2170956.0,
+      "reserve_to_premium": 0.951068057510173,
+      "negative_paid_increments": 0
+    },
+    {
+      "line": "wkcomp",
+      "companies": 110,
+      "reserve": 3267680.6690445933,
+      "std_error": 102372.70039234612,
+      "cv": 0.03132885699699595,
+      "premium_latest_ay": 3540362.0,
+      "reserve_to_premium": 0.9229792515693575,
+      "negative_paid_increments": 0
+    },
+    {
+      "line": "medmal",
+      "companies": 32,
+      "reserve": 847715.9108322348,
+      "std_error": 217921.94816648163,
+      "cv": 0.2570695505202202,
+      "premium_latest_ay": 524906.0,
+      "reserve_to_premium": 1.614986132435588,
+      "negative_paid_increments": 1
+    },
+    {
+      "line": "othliab",
+      "companies": 206,
+      "reserve": 2906068.2125501544,
+      "std_error": 247105.9057432438,
+      "cv": 0.08503100673139452,
+      "premium_latest_ay": 2066797.0,
+      "reserve_to_premium": 1.4060733649943147,
+      "negative_paid_increments": 1
+    },
+    {
+      "line": "prodliab",
+      "companies": 59,
+      "reserve": 192669.64036723488,
+      "std_error": 53948.73262738212,
+      "cv": 0.2800064012397283,
+      "premium_latest_ay": 158200.0,
+      "reserve_to_premium": 1.2178864751405492,
+      "negative_paid_increments": 2
+    }
+  ],
+  "per_line_note": "Mack on paid triangles at valuation 2007, tail 1.0 at lag 10; medmal/othliab/prodliab are long-tail with negative increments, so their reserve and CV are likely understated.",
+  "backtest_note": "Overlapping retrospective fixed-cohort tests to development lag 10; not one-year risk."
+}

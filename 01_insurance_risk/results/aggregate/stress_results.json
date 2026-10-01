@@ -1,0 +1,27 @@
+{
+  "currency": "EUR",
+  "horizon": "one policy-year",
+  "comparison": [
+    {
+      "Stress type": "(A) Frequency +10%",
+      "What it changes": "Claim rate (lambda) only",
+      "Mean % change": 10.0,
+      "VaR 99.5% % change": 6.558004059010036,
+      "ES 99.5% % change": -2.272160914213883
+    },
+    {
+      "Stress type": "(B) Severity level +10%",
+      "What it changes": "Every claim size, proportionally (body + tail)",
+      "Mean % change": 10.0,
+      "VaR 99.5% % change": 10.0,
+      "ES 99.5% % change": 10.0
+    },
+    {
+      "Stress type": "(C) Tail-shape: xi 0.85 -> 0.90",
+      "What it changes": "GPD tail shape only (ordinary claims unaffected)",
+      "Mean % change": 19.58314663555867,
+      "VaR 99.5% % change": 0.0,
+      "ES 99.5% % change": 21.92110426151297
+    }
+  ]
+}

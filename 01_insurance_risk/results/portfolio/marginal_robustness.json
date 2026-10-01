@@ -1,0 +1,130 @@
+{
+  "unit": "USD millions",
+  "dependence": "independence",
+  "n_sim": 500000,
+  "alternatives": [
+    {
+      "wkcomp marginal": "Burr XII (baseline)",
+      "wkcomp mean": 8.447456191669563,
+      "wkcomp VaR99.5": 38.87624531173934,
+      "wkcomp ES99.5": 58.7702653267439,
+      "portfolio mean": 28.269996282716416,
+      "portfolio VaR99.5": 60.30428681727546,
+      "portfolio ES99.5": 79.65317309323045,
+      "D_VaR": 0.3727749440631609,
+      "D_K": 0.5280369933729454,
+      "portfolio VaR vs baseline": 0.0,
+      "portfolio ES vs baseline": 0.0
+    },
+    {
+      "wkcomp marginal": "Lognormal",
+      "wkcomp mean": 9.628679870924088,
+      "wkcomp VaR99.5": 52.62895646349788,
+      "wkcomp ES99.5": 69.24488852874028,
+      "portfolio mean": 29.45121996197094,
+      "portfolio VaR99.5": 73.414800464933,
+      "portfolio ES99.5": 89.86611623070306,
+      "D_VaR": 0.3319689445866987,
+      "D_K": 0.45350242404765173,
+      "portfolio VaR vs baseline": 0.217405997808795,
+      "portfolio ES vs baseline": 0.1282176558806869
+    },
+    {
+      "wkcomp marginal": "Empirical (all years)",
+      "wkcomp mean": 11.542033792217092,
+      "wkcomp VaR99.5": 119.63510459851786,
+      "wkcomp ES99.5": 617.8706356126133,
+      "portfolio mean": 31.364573883263944,
+      "portfolio VaR99.5": 139.3424820163925,
+      "portfolio ES99.5": 637.7034981570023,
+      "D_VaR": 0.21232461034548356,
+      "D_K": 0.2580819488451451,
+      "portfolio VaR vs baseline": 1.3106563292690305,
+      "portfolio ES vs baseline": 7.006002440236738
+    },
+    {
+      "wkcomp marginal": "Burr XII, AY2001 excluded",
+      "wkcomp mean": 7.55927195059469,
+      "wkcomp VaR99.5": 21.040456085376785,
+      "wkcomp ES99.5": 26.21397349262638,
+      "portfolio mean": 27.381812041641545,
+      "portfolio VaR99.5": 46.35256447504886,
+      "portfolio ES99.5": 51.55217926598482,
+      "D_VaR": 0.4080796470804152,
+      "D_K": 0.6274910756593766,
+      "portfolio VaR vs baseline": -0.23135539906973634,
+      "portfolio ES vs baseline": -0.35279189435874303
+    },
+    {
+      "wkcomp marginal": "Empirical, AY2001 excluded",
+      "wkcomp mean": 7.566271115784276,
+      "wkcomp VaR99.5": 21.74975459470871,
+      "wkcomp ES99.5": 25.18380063971851,
+      "portfolio mean": 27.388811206831132,
+      "portfolio VaR99.5": 46.434642071246216,
+      "portfolio ES99.5": 50.48419102474826,
+      "D_VaR": 0.41235424609422056,
+      "D_K": 0.6311040325908398,
+      "portfolio VaR vs baseline": -0.22999434166355126,
+      "portfolio ES vs baseline": -0.3661998754819372
+    }
+  ],
+  "wkcomp_loss_ratio_quantiles": {
+    "Burr XII (baseline)": {
+      "LR q0.9": 1.21666254648132,
+      "LR q0.95": 1.5523082271211526,
+      "LR q0.99": 2.696280107498064,
+      "LR q0.995": 3.414709445126203
+    },
+    "Lognormal": {
+      "LR q0.9": 1.6933985620750645,
+      "LR q0.95": 2.2447027782581093,
+      "LR q0.99": 3.808555119797613,
+      "LR q0.995": 4.6218168498801715
+    },
+    "Empirical (all years)": {
+      "LR q0.9": 1.061985665670207,
+      "LR q0.95": 1.4345036295119846,
+      "LR q0.99": 6.844352243737346,
+      "LR q0.995": 10.533246079893352
+    },
+    "Burr XII, AY2001 excluded": {
+      "LR q0.9": 0.9911478394822963,
+      "LR q0.95": 1.1550200853326182,
+      "LR q0.99": 1.6084662465191584,
+      "LR q0.995": 1.8474174695807881
+    },
+    "Empirical, AY2001 excluded": {
+      "LR q0.9": 1.0010824855111706,
+      "LR q0.95": 1.1731019000450889,
+      "LR q0.99": 1.6904618208649032,
+      "LR q0.995": 1.908904343371734
+    }
+  },
+  "ay2001": {
+    "n_companies": 35,
+    "n_of_top12": 12,
+    "largest_other_year_LR": 2.4984934717107468
+  },
+  "gpd_tail_not_used": {
+    "n": 584,
+    "threshold": 1.0610998681820234,
+    "n_exceed": 59,
+    "xi": 1.3621209239914531,
+    "sigma": 0.29846639730600955,
+    "tail_pct": 0.9
+  },
+  "bootstrap_var995_usd_m": {
+    "Burr XII refit": {
+      "p05": 29.966947864874363,
+      "median": 38.92187535698657,
+      "p95": 51.565328953302064
+    },
+    "Empirical quantile": {
+      "p05": 56.550409039453534,
+      "median": 94.49709846777148,
+      "p95": 640.9112879147469
+    }
+  },
+  "bootstrap_resamples": 500
+}

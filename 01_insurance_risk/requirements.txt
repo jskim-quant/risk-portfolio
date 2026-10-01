@@ -1,0 +1,14 @@
+# Minimal dependencies, tested with the versions in results/validation/validation.json after a full run.
+numpy>=2.4,<3
+scipy>=1.17,<2
+pandas>=3.0,<4
+matplotlib>=3.10,<4
+statsmodels>=0.15,<0.16
+scikit-learn>=1.8,<2
+chainladder>=0.10,<0.11
+# notebook execution (run_notebooks.py) and tests
+nbformat>=5.10
+nbclient>=0.10
+jupyter-client>=8.6
+ipykernel>=6.29
+pytest>=8

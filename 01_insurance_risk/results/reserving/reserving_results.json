@@ -1,0 +1,31 @@
+{
+  "currency": "USD thousands",
+  "valuation_year": 2007,
+  "tail_factor": 1.0,
+  "lines": {
+    "wkcomp": {
+      "CL_unpaid": 3267680.6690445933,
+      "BF_unpaid": 4089828.632118422
+    },
+    "comauto": {
+      "CL_unpaid": 2064726.905860055,
+      "BF_unpaid": 2601431.987094107
+    }
+  },
+  "sample_selection": [
+    {
+      "line": "wkcomp",
+      "companies_total": 132,
+      "companies_retained": 110,
+      "companies_retained_pct": 83.33333333333333,
+      "earned_premium_retained_pct": 79.18921406908152
+    },
+    {
+      "line": "comauto",
+      "companies_total": 157,
+      "companies_retained": 137,
+      "companies_retained_pct": 87.26114649681529,
+      "earned_premium_retained_pct": 88.31216001546866
+    }
+  ]
+}

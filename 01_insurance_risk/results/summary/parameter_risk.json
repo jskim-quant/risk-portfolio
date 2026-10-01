@@ -1,0 +1,148 @@
+{
+  "n_bootstrap": 300,
+  "cas": {
+    "unit": "USD millions",
+    "reference_rho_pr": 0.25,
+    "n_draws_per_replicate": 100000,
+    "baseline_var995_same_draws": 63.93976004914962,
+    "summary": [
+      {
+        "source": "Monte Carlo noise only",
+        "n": 40,
+        "p05": 62.767275532136914,
+        "median": 63.439919692106415,
+        "p95": 64.2347575601649,
+        "sd": 0.5056544630611973,
+        "parameter_sd_ex_mc": NaN,
+        "width_p95_p05_pct_of_base": 2.295100930782266
+      },
+      {
+        "source": "Parameters: WC marginal only",
+        "n": 300,
+        "p05": 56.1767366409373,
+        "median": 64.08564275593706,
+        "p95": 77.00559243309804,
+        "sd": 6.165083981569013,
+        "parameter_sd_ex_mc": 6.165083981569013,
+        "width_p95_p05_pct_of_base": 32.57574907405015
+      },
+      {
+        "source": "Parameters: All six marginals",
+        "n": 300,
+        "p05": 56.30513478669431,
+        "median": 64.19485340558849,
+        "p95": 74.89454431178945,
+        "sd": 5.855911006850956,
+        "parameter_sd_ex_mc": 5.855911006850956,
+        "width_p95_p05_pct_of_base": 29.07331762084454
+      },
+      {
+        "source": "Parameters: Dependence only",
+        "n": 300,
+        "p05": 63.105770109829415,
+        "median": 63.9393914479643,
+        "p95": 64.72586027796437,
+        "sd": 0.45968414750136544,
+        "parameter_sd_ex_mc": 0.45968414750136544,
+        "width_p95_p05_pct_of_base": 2.533775802238883
+      },
+      {
+        "source": "Parameters: Marginals and dependence",
+        "n": 300,
+        "p05": 56.34283709226203,
+        "median": 64.11976766596288,
+        "p95": 75.41056716698235,
+        "sd": 6.2554708390763825,
+        "parameter_sd_ex_mc": 6.2554708390763825,
+        "width_p95_p05_pct_of_base": 29.82139760934857
+      }
+    ],
+    "es_summary": [
+      {
+        "source": "ES (premium block), Monte Carlo only",
+        "n": 40,
+        "p05": 79.69574011276131,
+        "median": 82.46349793953635,
+        "p95": 86.53337701776609,
+        "sd": 2.3517852992596207
+      },
+      {
+        "source": "ES (premium block), marginals and dependence",
+        "n": 300,
+        "p05": 68.02285932072073,
+        "median": 87.9048197182583,
+        "p95": 128.38323554367017,
+        "sd": 19.891330050158363
+      }
+    ],
+    "design": "common random numbers: spread is parameter uncertainty only"
+  },
+  "motor": {
+    "unit": "EUR per policy-year",
+    "n_draws_per_replicate": 500000,
+    "baseline_var995": 6247.397607333195,
+    "summary": [
+      {
+        "source": "Monte Carlo noise only",
+        "n": 60,
+        "p05": 6115.783873094029,
+        "median": 6261.039203957709,
+        "p95": 6380.731760234386,
+        "sd": 84.53018562731248,
+        "parameter_sd_ex_mc": NaN
+      },
+      {
+        "source": "Parameters: Frequency only",
+        "n": 300,
+        "p05": 6137.580783558575,
+        "median": 6263.435556768149,
+        "p95": 6385.248803986995,
+        "sd": 77.78017449244123,
+        "parameter_sd_ex_mc": 0.0
+      },
+      {
+        "source": "Parameters: Severity incl. GPD tail and threshold",
+        "n": 300,
+        "p05": 6062.8572661700455,
+        "median": 6257.489368777322,
+        "p95": 6403.934011074643,
+        "sd": 98.9410598603604,
+        "parameter_sd_ex_mc": 51.41965620366899
+      },
+      {
+        "source": "Parameters: Frequency and severity",
+        "n": 300,
+        "p05": 6078.81886078071,
+        "median": 6259.921318050625,
+        "p95": 6425.5649829890735,
+        "sd": 106.20657046391122,
+        "parameter_sd_ex_mc": 64.29994811442567
+      }
+    ],
+    "es_summary": [
+      {
+        "source": "ES, Monte Carlo only",
+        "n": 60,
+        "p05": 21404.460972618665,
+        "median": 26339.60497315263,
+        "p95": 49490.196763693006,
+        "sd": 36254.638261289096
+      },
+      {
+        "source": "ES, frequency and severity parameters",
+        "n": 300,
+        "p05": 20055.062753389415,
+        "median": 25881.02889755177,
+        "p95": 56259.53919516688,
+        "sd": 53420.759011599526
+      }
+    ],
+    "xi_bootstrap_p05_p95": [
+      0.6625811367177207,
+      1.0176566315490796
+    ],
+    "draws_with_infinite_mean": 20,
+    "design": "fresh random numbers per draw; MC variance subtracted in parameter_sd_ex_mc"
+  },
+  "note": "Model-specification uncertainty is in model_risk_table.json, not resampled here."
+}

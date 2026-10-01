@@ -1,0 +1,82 @@
+{
+  "currency": "EUR",
+  "basis": "actual held-out policy-year exposure",
+  "capital_loading": {
+    "k": 0.01,
+    "capital_ratio": 20.027021863060803,
+    "label": "illustrative capital loading (assumed scaling, not Solvency II Risk Margin)",
+    "sensitivity": [
+      {
+        "k": 0.0,
+        "loading_pct_of_pure_premium": 0.0,
+        "avg_gross_premium_eur": 403.7826696084968,
+        "loss_ratio": 0.7257026062334777,
+        "combined_ratio_ex_profit": 0.9499999999999998
+      },
+      {
+        "k": 0.005,
+        "loading_pct_of_pure_premium": 10.013510931530403,
+        "avg_gross_premium_eur": 440.46042477004494,
+        "loss_ratio": 0.6652723359647581,
+        "combined_ratio_ex_profit": 0.8833828819137213
+      },
+      {
+        "k": 0.01,
+        "loading_pct_of_pure_premium": 20.027021863060806,
+        "avg_gross_premium_eur": 477.1381799315932,
+        "loss_ratio": 0.6141326517379269,
+        "combined_ratio_ex_profit": 0.8270075195682502
+      },
+      {
+        "k": 0.015,
+        "loading_pct_of_pure_premium": 30.0405327945912,
+        "avg_gross_premium_eur": 513.8159350931414,
+        "loss_ratio": 0.5702939820923993,
+        "combined_ratio_ex_profit": 0.7786806492839526
+      },
+      {
+        "k": 0.02,
+        "loading_pct_of_pure_premium": 40.05404372612161,
+        "avg_gross_premium_eur": 550.4936902546897,
+        "loss_ratio": 0.5322969924527688,
+        "combined_ratio_ex_profit": 0.7367935298901376
+      }
+    ]
+  },
+  "validation": [
+    {
+      "model": "Constant",
+      "actual_to_predicted": 1.0209583145988845,
+      "poisson_deviance": 0.33341982615225657
+    },
+    {
+      "model": "Poisson",
+      "actual_to_predicted": 1.0192749416742177,
+      "poisson_deviance": 0.32308293733758076
+    },
+    {
+      "model": "NB2",
+      "actual_to_predicted": 1.0118697832742298,
+      "poisson_deviance": 0.32308615372812094
+    }
+  ],
+  "ratios": [
+    {
+      "Basis": "Gross",
+      "Premium (EUR, observed exposure)": 42700119.06435934,
+      "Expected losses (EUR)": 26223537.350520205,
+      "Loss ratio": 0.6141326517379269,
+      "Expense ratio": 0.21287486783032344,
+      "Combined ratio": 0.8270075195682502
+    },
+    {
+      "Basis": "Net of 25% QS",
+      "Premium (EUR, observed exposure)": 34833057.85920328,
+      "Expected losses (EUR)": 19667653.012890153,
+      "Loss ratio": 0.5646260828546162,
+      "Expense ratio": 0.20449014064935367,
+      "Combined ratio": 0.7691162235039699
+    }
+  ],
+  "mean_annual_pure_premium": 293.02613568679743
+}

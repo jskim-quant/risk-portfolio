@@ -1,0 +1,123 @@
+{
+  "n_sim": 500000,
+  "seed": 42,
+  "mean_loss": 350.42694644324996,
+  "analytical_mean_loss": 297.11281264743934,
+  "currency": "EUR",
+  "exposure": 1.0,
+  "horizon": "one policy-year",
+  "var_995": 6247.397607333195,
+  "es_995": 45791.505567921624,
+  "capital_proxy_995": 5950.2847946857555,
+  "p_zero": 0.908712,
+  "es_995_replicates_500k": {
+    "n_replicates": 30,
+    "median": 27004.42231892956,
+    "p05": 21111.206727666973,
+    "p95": 40161.98973790183
+  },
+  "first_moment_check": {
+    "label": "Heavy-tail Monte Carlo instability despite a finite theoretical mean",
+    "analytical_severity_mean": 2901.5642488304593,
+    "sampler_ks_pvalue": 0.5876698706804666,
+    "capped_mean_z": [
+      -1.423597526813554,
+      -1.374210058040063,
+      -1.7546587605155366
+    ],
+    "seed42_percentile_in_500k_replicates": 0.975,
+    "replicates": [
+      {
+        "quantity": "E[X] per claim (N claims)",
+        "N": 100000,
+        "median": -0.11118775538585429,
+        "p05": -0.19895975081421266,
+        "p95": 0.4053009173234202,
+        "share_above_analytic": 0.2,
+        "mean_over_replicates": -0.032214023805396674
+      },
+      {
+        "quantity": "E[X] per claim (N claims)",
+        "N": 250000,
+        "median": -0.11111936369843883,
+        "p05": -0.18788334098747794,
+        "p95": 0.06776437246928854,
+        "share_above_analytic": 0.125,
+        "mean_over_replicates": -0.09759386087869576
+      },
+      {
+        "quantity": "E[X] per claim (N claims)",
+        "N": 500000,
+        "median": -0.09451718758880406,
+        "p05": -0.16370049674620427,
+        "p95": 0.12784846693496815,
+        "share_above_analytic": 0.175,
+        "mean_over_replicates": -0.06436289667273251
+      },
+      {
+        "quantity": "E[X] per claim (N claims)",
+        "N": 1000000,
+        "median": -0.10425819650883039,
+        "p05": -0.15222212578344463,
+        "p95": 0.10634107809768886,
+        "share_above_analytic": 0.1,
+        "mean_over_replicates": -0.07784576099167069
+      },
+      {
+        "quantity": "E[X] per claim (N claims)",
+        "N": 2000000,
+        "median": -0.08231808514161704,
+        "p05": -0.12923429783935242,
+        "p95": 0.24996424341516682,
+        "share_above_analytic": 0.175,
+        "mean_over_replicates": -0.04087021549579374
+      },
+      {
+        "quantity": "E[S] per policy-year (N years)",
+        "N": 100000,
+        "median": -0.1770043307728219,
+        "p05": -0.259416378266615,
+        "p95": 0.22102266745374102,
+        "share_above_analytic": 0.15,
+        "mean_over_replicates": -0.03210088144227387
+      },
+      {
+        "quantity": "E[S] per policy-year (N years)",
+        "N": 250000,
+        "median": -0.12328575573377376,
+        "p05": -0.2546362238582101,
+        "p95": 1.111211340786345,
+        "share_above_analytic": 0.25,
+        "mean_over_replicates": 0.05724191905821792
+      },
+      {
+        "quantity": "E[S] per policy-year (N years)",
+        "N": 500000,
+        "median": -0.16971470572811242,
+        "p05": -0.21706570012165521,
+        "p95": 0.02814341026653567,
+        "share_above_analytic": 0.125,
+        "mean_over_replicates": -0.11710167333629237
+      },
+      {
+        "quantity": "E[S] per policy-year (N years)",
+        "N": 1000000,
+        "median": -0.11657731753277095,
+        "p05": -0.19914118709380632,
+        "p95": 0.17886842466196942,
+        "share_above_analytic": 0.175,
+        "mean_over_replicates": 0.07922541191368168
+      },
+      {
+        "quantity": "E[S] per policy-year (N years)",
+        "N": 2000000,
+        "median": -0.1229690759324546,
+        "p05": -0.1773530651922204,
+        "p95": 0.18426576158151292,
+        "share_above_analytic": 0.15,
+        "mean_over_replicates": -0.08979449457671082
+      }
+    ]
+  },
+  "note": "ES_995 has high Monte Carlo variance under this fitted tail (xi~0.85); see Part 2 convergence study."
+}

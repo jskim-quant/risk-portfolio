@@ -1,0 +1,247 @@
+{
+  "unit": "USD millions",
+  "basis": "CAS loss-ratio scenarios and runoff reserves; not one insurer",
+  "definition": "L_total = L_premium + L_reserve; reserve deviation has mean zero; K = VaR99.5 - E[L]",
+  "premium_reserve_dependence": "assumed latent Gaussian correlation scaled by the cross-line correlation; scenarios 0, 0.25, 0.50",
+  "reserve_inputs": [
+    {
+      "line": "ppauto",
+      "book_premium_usd_m": 11.786,
+      "reserve_to_premium": 0.7755693252120616,
+      "reserve_best_estimate_usd_m": 9.140860066949356,
+      "mack_cv": 0.020214412955502928,
+      "negative_paid_increments": 0
+    },
+    {
+      "line": "comauto",
+      "book_premium_usd_m": 5.618,
+      "reserve_to_premium": 0.951068057510173,
+      "reserve_best_estimate_usd_m": 5.343100347092151,
+      "mack_cv": 0.036533863164866606,
+      "negative_paid_increments": 0
+    },
+    {
+      "line": "wkcomp",
+      "book_premium_usd_m": 11.395,
+      "reserve_to_premium": 0.9229792515693575,
+      "reserve_best_estimate_usd_m": 10.517348571632828,
+      "mack_cv": 0.03132885699699595,
+      "negative_paid_increments": 0
+    },
+    {
+      "line": "othliab",
+      "book_premium_usd_m": 4.063,
+      "reserve_to_premium": 1.4060733649943147,
+      "reserve_best_estimate_usd_m": 5.712876081971901,
+      "mack_cv": 0.08503100673139452,
+      "negative_paid_increments": 1
+    },
+    {
+      "line": "medmal",
+      "book_premium_usd_m": 4.828,
+      "reserve_to_premium": 1.614986132435588,
+      "reserve_best_estimate_usd_m": 7.79715304739902,
+      "mack_cv": 0.2570695505202202,
+      "negative_paid_increments": 1
+    },
+    {
+      "line": "prodliab",
+      "book_premium_usd_m": 3.668,
+      "reserve_to_premium": 1.2178864751405492,
+      "reserve_best_estimate_usd_m": 4.4672075908155335,
+      "mack_cv": 0.2800064012397283,
+      "negative_paid_increments": 2
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "Independent (rho_PR = 0)",
+      "EL": 28.29455098994835,
+      "VaR_premium": 62.202243603101905,
+      "VaR_reserve_standalone": 7.685367881140264,
+      "VaR_total": 62.455370371814666,
+      "ES_total": 82.91000053088368,
+      "K_premium": 33.91084045980871,
+      "K_total": 34.16081938186631,
+      "reserve_added_to_K": 0.2499789220576058,
+      "corr_prem_res": -0.0021982253286756824
+    },
+    {
+      "scenario": "Moderate (rho_PR = 0.25)",
+      "EL": 28.29609104665013,
+      "VaR_premium": 62.202243603101905,
+      "VaR_reserve_standalone": 7.7274707047049125,
+      "VaR_total": 63.19899147218976,
+      "ES_total": 83.47393871259911,
+      "K_premium": 33.91084045980871,
+      "K_total": 34.90290042553963,
+      "reserve_added_to_K": 0.9920599657309213,
+      "corr_prem_res": 0.11987649416332402
+    },
+    {
+      "scenario": "Stressed (rho_PR = 0.50)",
+      "EL": 28.297361267911466,
+      "VaR_premium": 62.202243603101905,
+      "VaR_reserve_standalone": 7.720197375409931,
+      "VaR_total": 63.92767657876671,
+      "ES_total": 84.10049974000016,
+      "K_premium": 33.91084045980871,
+      "K_total": 35.630315310855245,
+      "reserve_added_to_K": 1.719474851046536,
+      "corr_prem_res": 0.24512699006064448
+    }
+  ],
+  "net_of_reinsurance": [
+    {
+      "scenario": "Independent (rho_PR = 0)",
+      "treaty": "Gross",
+      "EL": 28.29455098994835,
+      "VaR": 62.455370371814666,
+      "ES": 82.91000053088368,
+      "K": 34.16081938186631,
+      "VaR_relief": 0.0,
+      "ES_relief": 0.0,
+      "expected_ceded": 0.0
+    },
+    {
+      "scenario": "Independent (rho_PR = 0)",
+      "treaty": "Quota share 25%",
+      "EL": 21.22170020412505,
+      "VaR": 47.08773226419833,
+      "ES": 62.32190823869507,
+      "K": 25.866032060073277,
+      "VaR_relief": 15.367638107616338,
+      "ES_relief": 20.58809229218861,
+      "expected_ceded": 7.072850785823299
+    },
+    {
+      "scenario": "Independent (rho_PR = 0)",
+      "treaty": "Stop-loss 200% xs 100% premium",
+      "EL": 26.087790421147467,
+      "VaR": 42.10995842379935,
+      "ES": 59.58818935462481,
+      "K": 16.02216800265188,
+      "VaR_relief": 20.345411948015318,
+      "ES_relief": 23.321811176258873,
+      "expected_ceded": 2.2067605688008816
+    },
+    {
+      "scenario": "Moderate (rho_PR = 0.25)",
+      "treaty": "Gross",
+      "EL": 28.29609104665013,
+      "VaR": 63.19899147218976,
+      "ES": 83.47393871259911,
+      "K": 34.90290042553963,
+      "VaR_relief": 0.0,
+      "ES_relief": 0.0,
+      "expected_ceded": 0.0
+    },
+    {
+      "scenario": "Moderate (rho_PR = 0.25)",
+      "treaty": "Quota share 25%",
+      "EL": 21.223240260826834,
+      "VaR": 47.792451624768724,
+      "ES": 62.90045709565637,
+      "K": 26.569211363941886,
+      "VaR_relief": 15.406539847421039,
+      "ES_relief": 20.573481616942736,
+      "expected_ceded": 7.072850785823299
+    },
+    {
+      "scenario": "Moderate (rho_PR = 0.25)",
+      "treaty": "Stop-loss 200% xs 100% premium",
+      "EL": 26.08933047784925,
+      "VaR": 43.03388526611393,
+      "ES": 60.32714975301529,
+      "K": 16.944554788264675,
+      "VaR_relief": 20.165106206075833,
+      "ES_relief": 23.146788959583812,
+      "expected_ceded": 2.2067605688008816
+    },
+    {
+      "scenario": "Stressed (rho_PR = 0.50)",
+      "treaty": "Gross",
+      "EL": 28.297361267911466,
+      "VaR": 63.92767657876671,
+      "ES": 84.10049974000016,
+      "K": 35.630315310855245,
+      "VaR_relief": 0.0,
+      "ES_relief": 0.0,
+      "expected_ceded": 0.0
+    },
+    {
+      "scenario": "Stressed (rho_PR = 0.50)",
+      "treaty": "Quota share 25%",
+      "EL": 21.224510482088167,
+      "VaR": 48.55546650688853,
+      "ES": 63.5461628266783,
+      "K": 27.33095602480036,
+      "VaR_relief": 15.37221007187818,
+      "ES_relief": 20.55433691332186,
+      "expected_ceded": 7.072850785823299
+    },
+    {
+      "scenario": "Stressed (rho_PR = 0.50)",
+      "treaty": "Stop-loss 200% xs 100% premium",
+      "EL": 26.090600699110585,
+      "VaR": 44.01727894700184,
+      "ES": 61.11223820544915,
+      "K": 17.926678247891253,
+      "VaR_relief": 19.91039763176487,
+      "ES_relief": 22.988261534551008,
+      "expected_ceded": 2.2067605688008816
+    }
+  ],
+  "waterfall": {
+    "reference_scenario": "Moderate (rho_PR = 0.25)",
+    "treaty": "Quota share 25% on premium block",
+    "steps": [
+      {
+        "step": "Sum of stand-alone premium K",
+        "value_usd_m": 67.7597968719445,
+        "kind": "total"
+      },
+      {
+        "step": "Cross-line diversification (lines independent)",
+        "value_usd_m": -36.09925749543101,
+        "kind": "delta"
+      },
+      {
+        "step": "Fitted cross-line dependence",
+        "value_usd_m": 2.2503010832952097,
+        "kind": "delta"
+      },
+      {
+        "step": "Reserve risk (stand-alone sum)",
+        "value_usd_m": 14.242721149086243,
+        "kind": "delta"
+      },
+      {
+        "step": "Reserve cross-line diversification",
+        "value_usd_m": -6.519938347738266,
+        "kind": "delta"
+      },
+      {
+        "step": "Premium-reserve diversification",
+        "value_usd_m": -6.730722835617056,
+        "kind": "delta"
+      },
+      {
+        "step": "Integrated gross K",
+        "value_usd_m": 34.90290042553963,
+        "kind": "total"
+      },
+      {
+        "step": "Quota share 25% (premium block)",
+        "value_usd_m": -8.333689061597743,
+        "kind": "delta"
+      },
+      {
+        "step": "Integrated net K",
+        "value_usd_m": 26.569211363941886,
+        "kind": "total"
+      }
+    ]
+  },
+  "note": "Internal economic aggregation; not the Solvency II Standard Formula aggregation in notebook 10."
+}

@@ -1,0 +1,837 @@
+{
+  "unit": "USD millions",
+  "scope": "company-year loss-ratio scenarios; not one insurer",
+  "spearman_correlation": {
+    "ppauto": {
+      "ppauto": 1.0,
+      "comauto": 0.20485285976159923,
+      "wkcomp": 0.18725167491565498,
+      "othliab": 0.07989006240295315,
+      "medmal": 0.0,
+      "prodliab": 0.0
+    },
+    "comauto": {
+      "ppauto": 0.20485285976159923,
+      "comauto": 1.0,
+      "wkcomp": 0.2945067578588336,
+      "othliab": 0.19257462355412241,
+      "medmal": 0.0,
+      "prodliab": 0.0
+    },
+    "wkcomp": {
+      "ppauto": 0.18725167491565498,
+      "comauto": 0.2945067578588336,
+      "wkcomp": 1.0,
+      "othliab": -0.01656133206566653,
+      "medmal": 0.0,
+      "prodliab": 0.0
+    },
+    "othliab": {
+      "ppauto": 0.07989006240295315,
+      "comauto": 0.19257462355412241,
+      "wkcomp": -0.01656133206566653,
+      "othliab": 1.0,
+      "medmal": 0.0,
+      "prodliab": 0.0
+    },
+    "medmal": {
+      "ppauto": 0.0,
+      "comauto": 0.0,
+      "wkcomp": 0.0,
+      "othliab": 0.0,
+      "medmal": 1.0,
+      "prodliab": 0.0
+    },
+    "prodliab": {
+      "ppauto": 0.0,
+      "comauto": 0.0,
+      "wkcomp": 0.0,
+      "othliab": 0.0,
+      "medmal": 0.0,
+      "prodliab": 1.0
+    }
+  },
+  "kendall_tau": {
+    "ppauto": {
+      "ppauto": 1.0,
+      "comauto": 0.14426102207762645,
+      "wkcomp": 0.1373280130315235,
+      "othliab": 0.05274294670846395,
+      "medmal": 0.0,
+      "prodliab": 0.0
+    },
+    "comauto": {
+      "ppauto": 0.14426102207762645,
+      "comauto": 1.0,
+      "wkcomp": 0.2036114263030885,
+      "othliab": 0.13106233174570303,
+      "medmal": 0.0,
+      "prodliab": 0.0
+    },
+    "wkcomp": {
+      "ppauto": 0.1373280130315235,
+      "comauto": 0.2036114263030885,
+      "wkcomp": 1.0,
+      "othliab": -0.011800212998108002,
+      "medmal": 0.0,
+      "prodliab": 0.0
+    },
+    "othliab": {
+      "ppauto": 0.05274294670846395,
+      "comauto": 0.13106233174570303,
+      "wkcomp": -0.011800212998108002,
+      "othliab": 1.0,
+      "medmal": 0.0,
+      "prodliab": 0.0
+    },
+    "medmal": {
+      "ppauto": 0.0,
+      "comauto": 0.0,
+      "wkcomp": 0.0,
+      "othliab": 0.0,
+      "medmal": 1.0,
+      "prodliab": 0.0
+    },
+    "prodliab": {
+      "ppauto": 0.0,
+      "comauto": 0.0,
+      "wkcomp": 0.0,
+      "othliab": 0.0,
+      "medmal": 0.0,
+      "prodliab": 1.0
+    }
+  },
+  "latent_correlation_gaussian": [
+    [
+      1.0,
+      0.21411030987905127,
+      0.19577548577233114,
+      0.08363628192269251,
+      0.0,
+      0.0
+    ],
+    [
+      0.21411030987905127,
+      1.0,
+      0.3071859569797014,
+      0.20132212678983266,
+      0.0,
+      0.0
+    ],
+    [
+      0.19577548577233114,
+      0.3071859569797014,
+      1.0,
+      -0.01734276903415494,
+      0.0,
+      0.0
+    ],
+    [
+      0.08363628192269251,
+      0.20132212678983266,
+      -0.01734276903415494,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "latent_correlation_t": [
+    [
+      1.0,
+      0.2246703103067253,
+      0.21404526559743872,
+      0.0827536827825522,
+      0.0,
+      0.0
+    ],
+    [
+      0.2246703103067253,
+      1.0,
+      0.3144071610739916,
+      0.20442104802596506,
+      0.0,
+      0.0
+    ],
+    [
+      0.21404526559743872,
+      0.3144071610739916,
+      1.0,
+      -0.01853466985390086,
+      0.0,
+      0.0
+    ],
+    [
+      0.0827536827825522,
+      0.20442104802596506,
+      -0.01853466985390086,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "latent_checks": {
+    "gaussian": {
+      "min_eigenvalue": 0.6246208768128931,
+      "corrected": false,
+      "frobenius_change": 0.0
+    },
+    "student_t": {
+      "min_eigenvalue": 0.6163076789777442,
+      "corrected": false,
+      "frobenius_change": 0.0
+    }
+  },
+  "pair_table": [
+    {
+      "pair": "ppauto-comauto",
+      "n_matched": 387,
+      "n_companies": 52,
+      "rho_spearman": 0.20485285976159923,
+      "tau_kendall": 0.14426102207762645,
+      "used": true
+    },
+    {
+      "pair": "ppauto-wkcomp",
+      "n_matched": 183,
+      "n_companies": 32,
+      "rho_spearman": 0.18725167491565498,
+      "tau_kendall": 0.1373280130315235,
+      "used": true
+    },
+    {
+      "pair": "ppauto-othliab",
+      "n_matched": 320,
+      "n_companies": 39,
+      "rho_spearman": 0.07989006240295315,
+      "tau_kendall": 0.05274294670846395,
+      "used": true
+    },
+    {
+      "pair": "ppauto-medmal",
+      "n_matched": 2,
+      "n_companies": 1,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    },
+    {
+      "pair": "ppauto-prodliab",
+      "n_matched": 46,
+      "n_companies": 7,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    },
+    {
+      "pair": "comauto-wkcomp",
+      "n_matched": 306,
+      "n_companies": 42,
+      "rho_spearman": 0.2945067578588336,
+      "tau_kendall": 0.2036114263030885,
+      "used": true
+    },
+    {
+      "pair": "comauto-othliab",
+      "n_matched": 440,
+      "n_companies": 58,
+      "rho_spearman": 0.19257462355412241,
+      "tau_kendall": 0.13106233174570303,
+      "used": true
+    },
+    {
+      "pair": "comauto-medmal",
+      "n_matched": 2,
+      "n_companies": 1,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    },
+    {
+      "pair": "comauto-prodliab",
+      "n_matched": 58,
+      "n_companies": 9,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    },
+    {
+      "pair": "wkcomp-othliab",
+      "n_matched": 258,
+      "n_companies": 43,
+      "rho_spearman": -0.01656133206566653,
+      "tau_kendall": -0.011800212998108002,
+      "used": true
+    },
+    {
+      "pair": "wkcomp-medmal",
+      "n_matched": 0,
+      "n_companies": 0,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    },
+    {
+      "pair": "wkcomp-prodliab",
+      "n_matched": 60,
+      "n_companies": 10,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    },
+    {
+      "pair": "othliab-medmal",
+      "n_matched": 18,
+      "n_companies": 3,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    },
+    {
+      "pair": "othliab-prodliab",
+      "n_matched": 61,
+      "n_companies": 10,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    },
+    {
+      "pair": "medmal-prodliab",
+      "n_matched": 2,
+      "n_companies": 1,
+      "rho_spearman": 0.0,
+      "tau_kendall": 0.0,
+      "used": false
+    }
+  ],
+  "coexceedance": [
+    {
+      "pair": "ppauto-comauto",
+      "q": 0.8,
+      "n": 387,
+      "joint_count": 23,
+      "expected_count_independence": 15.479999999999992,
+      "empirical": 0.059431524547803614,
+      "gaussian_implied": 0.05809141073859436,
+      "t5_implied": 0.0640774316360464,
+      "independence": 0.03999999999999998
+    },
+    {
+      "pair": "ppauto-comauto",
+      "q": 0.9,
+      "n": 387,
+      "joint_count": 6,
+      "expected_count_independence": 3.869999999999998,
+      "empirical": 0.015503875968992248,
+      "gaussian_implied": 0.01778503710834245,
+      "t5_implied": 0.02357019335472843,
+      "independence": 0.009999999999999995
+    },
+    {
+      "pair": "ppauto-wkcomp",
+      "q": 0.8,
+      "n": 183,
+      "joint_count": 11,
+      "expected_count_independence": 7.319999999999997,
+      "empirical": 0.060109289617486336,
+      "gaussian_implied": 0.0564351861470791,
+      "t5_implied": 0.06313708550316532,
+      "independence": 0.03999999999999998
+    },
+    {
+      "pair": "ppauto-wkcomp",
+      "q": 0.9,
+      "n": 183,
+      "joint_count": 6,
+      "expected_count_independence": 1.8299999999999992,
+      "empirical": 0.03278688524590164,
+      "gaussian_implied": 0.01702214315137862,
+      "t5_implied": 0.02311995842791381,
+      "independence": 0.009999999999999995
+    },
+    {
+      "pair": "ppauto-othliab",
+      "q": 0.8,
+      "n": 320,
+      "joint_count": 24,
+      "expected_count_independence": 12.799999999999994,
+      "empirical": 0.075,
+      "gaussian_implied": 0.04675072298097105,
+      "t5_implied": 0.052043970418074514,
+      "independence": 0.03999999999999998
+    },
+    {
+      "pair": "ppauto-othliab",
+      "q": 0.9,
+      "n": 320,
+      "joint_count": 11,
+      "expected_count_independence": 3.1999999999999984,
+      "empirical": 0.034375,
+      "gaussian_implied": 0.012754337300739604,
+      "t5_implied": 0.017963216942021742,
+      "independence": 0.009999999999999995
+    },
+    {
+      "pair": "comauto-wkcomp",
+      "q": 0.8,
+      "n": 306,
+      "joint_count": 26,
+      "expected_count_independence": 12.239999999999993,
+      "empirical": 0.08496732026143791,
+      "gaussian_implied": 0.06684284464367563,
+      "t5_implied": 0.07230178131960396,
+      "independence": 0.03999999999999998
+    },
+    {
+      "pair": "comauto-wkcomp",
+      "q": 0.9,
+      "n": 306,
+      "joint_count": 11,
+      "expected_count_independence": 3.0599999999999983,
+      "empirical": 0.03594771241830065,
+      "gaussian_implied": 0.021957000994544895,
+      "t5_implied": 0.02758659218791837,
+      "independence": 0.009999999999999995
+    },
+    {
+      "pair": "comauto-othliab",
+      "q": 0.8,
+      "n": 440,
+      "joint_count": 32,
+      "expected_count_independence": 17.59999999999999,
+      "empirical": 0.07272727272727272,
+      "gaussian_implied": 0.05693398104787417,
+      "t5_implied": 0.06229109888956841,
+      "independence": 0.03999999999999998
+    },
+    {
+      "pair": "comauto-othliab",
+      "q": 0.9,
+      "n": 440,
+      "joint_count": 12,
+      "expected_count_independence": 4.399999999999998,
+      "empirical": 0.02727272727272727,
+      "gaussian_implied": 0.01725095028358381,
+      "t5_implied": 0.022716559296470207,
+      "independence": 0.009999999999999995
+    },
+    {
+      "pair": "wkcomp-othliab",
+      "q": 0.8,
+      "n": 258,
+      "joint_count": 11,
+      "expected_count_independence": 10.319999999999995,
+      "empirical": 0.04263565891472868,
+      "gaussian_implied": 0.038649041082870594,
+      "t5_implied": 0.044100959807572115,
+      "independence": 0.03999999999999998
+    },
+    {
+      "pair": "wkcomp-othliab",
+      "q": 0.9,
+      "n": 258,
+      "joint_count": 4,
+      "expected_count_independence": 2.5799999999999987,
+      "empirical": 0.015503875968992248,
+      "gaussian_implied": 0.009473445031074168,
+      "t5_implied": 0.014466705912434374,
+      "independence": 0.009999999999999995
+    }
+  ],
+  "copula_scenarios": [
+    {
+      "scenario": "Independence benchmark (notebook 05)",
+      "VaR995": 60.30428681727546,
+      "ES995": 79.65317309323045,
+      "K": 32.03429053455905,
+      "D_VaR": 0.3727749440631609,
+      "D_K": 0.5280369933729453
+    },
+    {
+      "scenario": "Gaussian copula (Spearman -> latent)",
+      "VaR995": 62.202243603101905,
+      "ES995": 82.7404719391015,
+      "K": 33.93224732038549,
+      "D_VaR": 0.35303429022270016,
+      "D_K": 0.5000742891538366
+    },
+    {
+      "scenario": "Student-t copula, dof=3 (Kendall -> latent)",
+      "VaR995": 68.60966914765426,
+      "ES995": 94.4172843452338,
+      "K": 40.339672864937846,
+      "D_VaR": 0.2863906392038197,
+      "D_K": 0.40567332773770914
+    },
+    {
+      "scenario": "Student-t copula, dof=5 (Kendall -> latent)",
+      "VaR995": 66.828781542055,
+      "ES995": 88.98990585835841,
+      "K": 38.55878525933859,
+      "D_VaR": 0.30491365617314103,
+      "D_K": 0.4319112451311574
+    },
+    {
+      "scenario": "Student-t copula, dof=10 (Kendall -> latent)",
+      "VaR995": 64.79243683641072,
+      "ES995": 86.0837066388732,
+      "K": 36.52244055369431,
+      "D_VaR": 0.3260936831548801,
+      "D_K": 0.46191282636699393
+    },
+    {
+      "scenario": "Student-t copula, dof=30 (Kendall -> latent)",
+      "VaR995": 62.841611627130234,
+      "ES995": 82.62965284777323,
+      "K": 34.57161534441382,
+      "D_VaR": 0.34638422161562876,
+      "D_K": 0.49065444404641745
+    },
+    {
+      "scenario": "Comonotonic (perfect positive dependence)",
+      "VaR995": 96.10986062938683,
+      "ES995": 127.22205805114815,
+      "K": 67.83986434667042,
+      "D_VaR": 0.0003610706481359527,
+      "D_K": 0.0005114578178426754
+    }
+  ],
+  "correlation_stress": [
+    {
+      "alpha": 0.0,
+      "VaR995": 62.202243603101905,
+      "ES995": 82.7404719391015,
+      "K": 33.93224732038549,
+      "D_VaR": 0.35303429022270016,
+      "D_K": 0.5000742891538366
+    },
+    {
+      "alpha": 0.25,
+      "VaR995": 67.33940880220713,
+      "ES995": 88.49217920072395,
+      "K": 39.069412519490726,
+      "D_VaR": 0.2996026206114031,
+      "D_K": 0.42438814494864696
+    },
+    {
+      "alpha": 0.5,
+      "VaR995": 72.87023348096459,
+      "ES995": 94.98159321131692,
+      "K": 44.60023719824817,
+      "D_VaR": 0.2420764976506602,
+      "D_K": 0.34290219345871453
+    },
+    {
+      "alpha": 0.75,
+      "VaR995": 78.8762640616965,
+      "ES995": 102.46190381937423,
+      "K": 50.6062677789801,
+      "D_VaR": 0.17960775677370533,
+      "D_K": 0.25441500665124517
+    },
+    {
+      "alpha": 1.0,
+      "VaR995": 85.30669280486842,
+      "ES995": 111.08585874464111,
+      "K": 57.036696522152006,
+      "D_VaR": 0.11272484942161265,
+      "D_K": 0.15967513781430842
+    }
+  ],
+  "capital_attribution": [
+    {
+      "Line": "ppauto",
+      "Premium share": 0.2849750955075197,
+      "Expected-loss share": 0.27917169074317294,
+      "Standalone VaR995 share": 0.15021431832413124,
+      "Allocated ES995 share (Euler)": 0.11487636203841549
+    },
+    {
+      "Line": "comauto",
+      "Premium share": 0.13583829005271048,
+      "Expected-loss share": 0.11745582520687818,
+      "Standalone VaR995 share": 0.08217791581180009,
+      "Allocated ES995 share (Euler)": 0.05900813255036944
+    },
+    {
+      "Line": "wkcomp",
+      "Premium share": 0.27552106001257315,
+      "Expected-loss share": 0.2988305592654749,
+      "Standalone VaR995 share": 0.40435193627535976,
+      "Allocated ES995 share (Euler)": 0.6911243223381667
+    },
+    {
+      "Line": "othliab",
+      "Premium share": 0.09823976014314038,
+      "Expected-loss share": 0.08234069278730496,
+      "Standalone VaR995 share": 0.09406999968016691,
+      "Allocated ES995 share (Euler)": 0.03453144631311357
+    },
+    {
+      "Line": "medmal",
+      "Premium share": 0.1167367861115141,
+      "Expected-loss share": 0.1493771747370641,
+      "Standalone VaR995 share": 0.17281057765884034,
+      "Allocated ES995 share (Euler)": 0.07065406616229339
+    },
+    {
+      "Line": "prodliab",
+      "Premium share": 0.08868900817254219,
+      "Expected-loss share": 0.07282405726010499,
+      "Standalone VaR995 share": 0.09637525224970157,
+      "Allocated ES995 share (Euler)": 0.02980567059764144
+    }
+  ],
+  "rorac": {
+    "expense_ratio_assumed": 0.3,
+    "table": [
+      {
+        "Line": "ppauto",
+        "premium": 11.786,
+        "expected_loss": 7.89815884900988,
+        "expected_profit": 0.3520411509901196,
+        "allocated_capital": 1.6067655606957005,
+        "RORAC": 0.21909926351526487
+      },
+      {
+        "Line": "comauto",
+        "premium": 5.618,
+        "expected_loss": 3.3229901024559694,
+        "expected_profit": 0.6096098975440305,
+        "allocated_capital": 1.5593706330066543,
+        "RORAC": 0.3909332936254091
+      },
+      {
+        "Line": "wkcomp",
+        "premium": 11.395,
+        "expected_loss": 8.45433582371532,
+        "expected_profit": -0.4778358237153216,
+        "allocated_capital": 48.729616775136286,
+        "RORAC": -0.009805860487684599
+      },
+      {
+        "Line": "othliab",
+        "premium": 4.063,
+        "expected_loss": 2.329533734743699,
+        "expected_profit": 0.514566265256301,
+        "allocated_capital": 0.5276144299430634,
+        "RORAC": 0.9752695075300148
+      },
+      {
+        "Line": "medmal",
+        "premium": 4.828,
+        "expected_loss": 4.226089870892432,
+        "expected_profit": -0.8464898708924324,
+        "allocated_capital": 1.6198609077922228,
+        "RORAC": -0.5225694791574107
+      },
+      {
+        "Line": "prodliab",
+        "premium": 3.668,
+        "expected_loss": 2.0602947624758983,
+        "expected_profit": 0.5073052375241018,
+        "allocated_capital": 0.40584048923435556,
+        "RORAC": 1.2500113985205519
+      },
+      {
+        "Line": "Portfolio",
+        "premium": 41.358,
+        "expected_loss": 28.291403143293195,
+        "expected_profit": 0.6591968567068034,
+        "allocated_capital": 54.44906879580828,
+        "RORAC": 0.012106669063136507
+      }
+    ],
+    "sensitivity": [
+      {
+        "Line": "ppauto",
+        "ER 25%": 0.5858609208567658,
+        "ER 30%": 0.21909926351526487,
+        "ER 35%": -0.14766239382623433
+      },
+      {
+        "Line": "comauto",
+        "ER 25%": 0.5710700706393452,
+        "ER 30%": 0.3909332936254091,
+        "ER 35%": 0.21079651661147328
+      },
+      {
+        "Line": "wkcomp",
+        "ER 25%": 0.0018862076570152193,
+        "ER 30%": -0.009805860487684599,
+        "ER 35%": -0.02149792863238438
+      },
+      {
+        "Line": "othliab",
+        "ER 25%": 1.360304465770112,
+        "ER 30%": 0.9752695075300148,
+        "ER 35%": 0.5902345492899186
+      },
+      {
+        "Line": "medmal",
+        "ER 25%": -0.37354433827107725,
+        "ER 30%": -0.5225694791574107,
+        "ER 35%": -0.6715946200437439
+      },
+      {
+        "Line": "prodliab",
+        "ER 25%": 1.7019130812383017,
+        "ER 30%": 1.2500113985205519,
+        "ER 35%": 0.7981097158028033
+      },
+      {
+        "Line": "Portfolio",
+        "ER 25%": 0.05008528000605124,
+        "ER 30%": 0.012106669063136507,
+        "ER 35%": -0.025871941879778163
+      }
+    ]
+  },
+  "marginal_vs_dependence": {
+    "grid": [
+      {
+        "wkcomp_marginal": "Burr XII (baseline)",
+        "dependence": "Independence",
+        "VaR995": 60.44976365148339,
+        "ES995": 80.3186965568947,
+        "wkcomp_ES_share": 0.7175548994591794
+      },
+      {
+        "wkcomp_marginal": "Burr XII (baseline)",
+        "dependence": "Gaussian copula",
+        "VaR995": 62.202243603101905,
+        "ES995": 82.7404719391015,
+        "wkcomp_ES_share": 0.6911243223381667
+      },
+      {
+        "wkcomp_marginal": "Burr XII (baseline)",
+        "dependence": "Student-t, 5 dof",
+        "VaR995": 66.828781542055,
+        "ES995": 88.98990585835841,
+        "wkcomp_ES_share": 0.6219973561279305
+      },
+      {
+        "wkcomp_marginal": "Lognormal",
+        "dependence": "Independence",
+        "VaR995": 73.6413771397182,
+        "ES995": 90.6104869090023,
+        "wkcomp_ES_share": 0.7604496520190949
+      },
+      {
+        "wkcomp_marginal": "Lognormal",
+        "dependence": "Gaussian copula",
+        "VaR995": 75.18145084924723,
+        "ES995": 92.0270214877963,
+        "wkcomp_ES_share": 0.7338375285347006
+      },
+      {
+        "wkcomp_marginal": "Lognormal",
+        "dependence": "Student-t, 5 dof",
+        "VaR995": 79.63025204790537,
+        "ES995": 99.10337501378199,
+        "wkcomp_ES_share": 0.6711536719400254
+      },
+      {
+        "wkcomp_marginal": "Empirical (all years)",
+        "dependence": "Independence",
+        "VaR995": 143.1955701456699,
+        "ES995": 654.9623345040734,
+        "wkcomp_ES_share": 0.9695898146253755
+      },
+      {
+        "wkcomp_marginal": "Empirical (all years)",
+        "dependence": "Gaussian copula",
+        "VaR995": 137.17012739788964,
+        "ES995": 621.0202797277332,
+        "wkcomp_ES_share": 0.9640346223810116
+      },
+      {
+        "wkcomp_marginal": "Empirical (all years)",
+        "dependence": "Student-t, 5 dof",
+        "VaR995": 144.28329992676058,
+        "ES995": 644.5572447195419,
+        "wkcomp_ES_share": 0.9565570472840446
+      },
+      {
+        "wkcomp_marginal": "Burr XII, AY2001 excluded",
+        "dependence": "Independence",
+        "VaR995": 46.38736551765512,
+        "ES995": 51.57961843574263,
+        "wkcomp_ES_share": 0.3679378793366401
+      },
+      {
+        "wkcomp_marginal": "Burr XII, AY2001 excluded",
+        "dependence": "Gaussian copula",
+        "VaR995": 48.13321264553969,
+        "ES995": 53.694930114458344,
+        "wkcomp_ES_share": 0.3674121563136723
+      },
+      {
+        "wkcomp_marginal": "Burr XII, AY2001 excluded",
+        "dependence": "Student-t, 5 dof",
+        "VaR995": 52.37394819429052,
+        "ES995": 61.322999713837355,
+        "wkcomp_ES_share": 0.33246318429112975
+      },
+      {
+        "wkcomp_marginal": "Empirical, AY2001 excluded",
+        "dependence": "Independence",
+        "VaR995": 46.38812794274664,
+        "ES995": 50.410812950128744,
+        "wkcomp_ES_share": 0.3429414165167084
+      },
+      {
+        "wkcomp_marginal": "Empirical, AY2001 excluded",
+        "dependence": "Gaussian copula",
+        "VaR995": 48.32563603987086,
+        "ES995": 52.57503989810795,
+        "wkcomp_ES_share": 0.3491927764458614
+      },
+      {
+        "wkcomp_marginal": "Empirical, AY2001 excluded",
+        "dependence": "Student-t, 5 dof",
+        "VaR995": 52.598892857129826,
+        "ES995": 60.49849818069908,
+        "wkcomp_ES_share": 0.3195096082917075
+      }
+    ],
+    "baseline_var995": 62.202243603101905,
+    "marginal_range": 89.03691475234996,
+    "marginal_range_ex_empirical": 27.048238203707534,
+    "dependence_range_fitted": 6.37901789057161,
+    "dependence_range_extended": 35.66009697790344
+  },
+  "portfolio_var995_gaussian": 62.202243603101905,
+  "portfolio_es995_gaussian": 82.7404719391015
+}

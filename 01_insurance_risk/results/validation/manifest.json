@@ -1,0 +1,92 @@
+{
+  "calibrated_model.json": {
+    "producer": 1,
+    "sha256": "dbd09c0b57229c451d539c090607668a9062ca3827476ce26fbaab014dbe5905",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:21:45.179750+00:00"
+  },
+  "loss_summary.json": {
+    "producer": 2,
+    "sha256": "5904488bfdb57f28294a26ab1b2fdccff4d9e4aac5c472d3e16bf01984ece623",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:22:25.639140+00:00"
+  },
+  "stress_results.json": {
+    "producer": 3,
+    "sha256": "d6a1356c2d7fc345efb1117c34153510849c34f757f6ee22867433ca2b453c8d",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:22:32.751034+00:00"
+  },
+  "reinsurance_results.json": {
+    "producer": 4,
+    "sha256": "2dbf4254b92afe934576ae3f2e983a375cd372e30003379ca262c225f2d734a4",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:22:41.068160+00:00"
+  },
+  "multi_line_results.json": {
+    "producer": 5,
+    "sha256": "1990c0b5ba9f7e4ffea7f3cb728fbd567065ae30e8334cd31a725920eacf89c9",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:22:55.401797+00:00"
+  },
+  "marginal_robustness.json": {
+    "producer": 5,
+    "sha256": "d7232a9a1be7476a2ea5cea0f69288b767b8321863e0f5b090fe896ac793d778",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:22:55.401859+00:00"
+  },
+  "dependency_results.json": {
+    "producer": 6,
+    "sha256": "dc0ef717bc64cdc43524a4f6b5afd02789b7491b8d085e1627ea17c8cce7d8fa",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:23:11.710422+00:00"
+  },
+  "portfolio_reinsurance.json": {
+    "producer": 6,
+    "sha256": "ea963fbb68b7d6a1d020365eabffc0c86cafc243fd1b7419785706168e49633d",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:23:11.710476+00:00"
+  },
+  "pricing_results.json": {
+    "producer": 7,
+    "sha256": "1835db01b498d7d737e94ff2f7e3103e02111ebe4fcb11a513132a3df207b48a",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:23:49.442248+00:00"
+  },
+  "reserving_results.json": {
+    "producer": 8,
+    "sha256": "e08895596fb4f52370b511bc6d1af534d5962981d9e2b13427c6b933f0dc3c8e",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:23:54.175905+00:00"
+  },
+  "reserve_risk_summary.json": {
+    "producer": 9,
+    "sha256": "41942ebdff445b68ce16bae86ae0d42026a68c0a14e440be12fe374a3f529e16",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:23:59.148522+00:00"
+  },
+  "scr_results.json": {
+    "producer": 10,
+    "sha256": "31837dd99ce7b816e2de9c5f3ae25b5c7a23ef77be546a1c36143ef573d68a9f",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:24:00.834715+00:00"
+  },
+  "integrated_risk.json": {
+    "producer": 11,
+    "sha256": "7d4cfa3ee746213263634a7a00d92a1d756bc5f291f45397fb1b5bdac03508c8",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:29:43.147997+00:00"
+  },
+  "parameter_risk.json": {
+    "producer": 11,
+    "sha256": "f326ec2b1153e3b0c2677a82ac7c191a3f4817e69a9764bc113ec5858db75462",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:29:43.148102+00:00"
+  },
+  "model_risk_table.json": {
+    "producer": 11,
+    "sha256": "32b1839095ee3466865bc698c3ed5a9bfb16ee3b85ee9c84fab24bba1e91b1a3",
+    "source_hash": "64bd7cb3a77e68bd558d8a27f4de34609d7e6d227fd3b3400afe0cb6f5fd40fb",
+    "generated_utc": "2026-10-01T11:29:43.148190+00:00"
+  }
+}
