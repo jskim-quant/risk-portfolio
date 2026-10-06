@@ -1,0 +1,14 @@
+numpy>=2.4,<3
+pandas>=3.0,<4
+scipy>=1.17,<2
+matplotlib>=3.10,<4
+scikit-learn>=1.8,<2
+cvxpy>=1.6
+arch>=7.2
+yfinance>=0.2.50
+requests>=2.32
+# notebook execution
+nbformat>=5.10
+nbclient>=0.10
+ipykernel>=6.29
+pytest>=8

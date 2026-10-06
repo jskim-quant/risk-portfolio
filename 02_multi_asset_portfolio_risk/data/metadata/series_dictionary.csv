@@ -1,0 +1,27 @@
+series_id,name,asset_class,region,currency,frequency,unit,role,fx_treatment,source,description
+SPY,SPDR S&P 500 ETF,equity,US,USD,D,price,investable,unhedged,Yahoo,US large-cap equity
+VGK,Vanguard FTSE Europe ETF,equity,Europe,USD,D,price,investable,unhedged,Yahoo,European developed equity; USD-listed so GBP/CHF/EUR exposure is embedded
+EWJ,iShares MSCI Japan ETF,equity,Japan,USD,D,price,investable,unhedged,Yahoo,Japanese equity; USD-listed so JPY exposure is embedded
+SHY,iShares 1-3Y Treasury Bond ETF,govt_bond,US,USD,D,price,investable,hedged,Yahoo,Short US Treasuries (duration ~1.9)
+IEF,iShares 7-10Y Treasury Bond ETF,govt_bond,US,USD,D,price,investable,hedged,Yahoo,Intermediate US Treasuries (duration ~7.5); validation target for synthetic UST
+TLT,iShares 20+Y Treasury Bond ETF,govt_bond,US,USD,D,price,investable,hedged,Yahoo,Long US Treasuries (duration ~17)
+LQD,iShares iBoxx USD IG Corporate Bond ETF,credit,US,USD,D,price,investable,hedged,Yahoo,US investment-grade corporates
+HYG,iShares iBoxx USD HY Corporate Bond ETF,credit,US,USD,D,price,investable,hedged,Yahoo,US high-yield corporates; latest inception (2007-04-11) sets common sample start
+GLD,SPDR Gold Shares,real_asset,Global,USD,D,price,investable,unhedged,Yahoo,Physical gold; no income so AdjClose = Close
+DBC,Invesco DB Commodity Index Tracking Fund,real_asset,Global,USD,D,price,investable,unhedged,Yahoo,Diversified commodity futures (energy/metals/agriculture)
+EUR_CORE7_10_SYN,Synthetic EUR 7-10Y govt bond (AAA),govt_bond,Euro Area,EUR,D,return,investable,n/a (base),derived,Built from ECB AAA par curve; ALL curve version for robustness
+JGB7_10_SYN,Synthetic JGB 7-10Y,govt_bond,Japan,JPY,D,return,investable,hedged,derived,Built from MoF JGB curve
+DGS3MO..DGS30,US Treasury constant-maturity yields,rates,US,USD,D,%,risk_factor,,FRED,Par yields 3M-30Y; DGS20 missing 1987-1993
+ECB G_N_A / G_N_C (SR/PY),ECB euro-area govt yield curves,rates,Euro Area,EUR,D,%,risk_factor,,ECB,AAA vs all issuers; zero-coupon (SR) and par (PY); 30Y end shows fitting jumps
+JGB_1Y..JGB_40Y,JGB constant-maturity yields,rates,Japan,JPY,D,%,risk_factor,,Japan MoF,Use from 1986-07 onward
+DFF,Effective Federal Funds Rate,short_rate,US,USD,D,%,hedge_carry,,FRED,USD overnight rate for hedge carry
+DTB3,3M Treasury bill (discount basis),short_rate,US,USD,D,%,reference,,FRED,Comparison only
+EONIA,Euro OverNight Index Average,short_rate,Euro Area,EUR,D,%,hedge_carry,,ECB,Used until 2019-09-30; equals €STR + 8.5bp afterwards
+ESTR,Euro short-term rate,short_rate,Euro Area,EUR,D,%,hedge_carry,,ECB,Used from 2019-10-01
+JPY_CALL_ON,Uncollateralized overnight call rate (average),short_rate,Japan,JPY,D,%,hedge_carry,,Bank of Japan,FM01'STRDCLUCON; manual download
+IRSTCI01JPM156N,Japan immediate rate (OECD),short_rate,Japan,JPY,M,%,reference,,FRED/OECD,Monthly backup for JPY call rate
+DEXUSEU,USD per EUR,fx,Global,,D,rate,conversion,,FRED,H.10 noon New York buying rate
+DEXJPUS,JPY per USD,fx,Global,,D,rate,conversion,,FRED,EURJPY = DEXJPUS * DEXUSEU
+DAAA / DBAA,Moody's seasoned Aaa / Baa corporate yields,credit,US,USD,D,%,risk_factor,,FRED,Baa-Aaa = long-history credit risk indicator
+BAMLC0A0CM / BAMLH0A0HYM2,ICE BofA US IG / HY OAS,credit,US,USD,D,%,reference,,FRED,Only ~3y public history; never spliced with Moody's
+VIXCLS,CBOE Volatility Index,volatility,US,USD,D,index,risk_factor,,FRED,Implied 30-day S&P 500 volatility

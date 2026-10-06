@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 *.pyc
 .ipynb_checkpoints/
+
+# 02: raw market data is rebuilt by scripts (licence terms)
+02_multi_asset_portfolio_risk/data/raw/
