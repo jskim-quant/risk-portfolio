@@ -1,13 +1,8 @@
-"""Project-level parameter-risk analysis: bootstrap of the inputs that move capital most.
+"""Bootstrap CAS and motor model parameters separately.
 
-Two self-contained cases are kept apart because their currency and model differ:
-  CAS portfolio (USD)   loss-ratio marginals, rank correlations; reserve inputs are taken as given
-  Motor policy (EUR)    frequency (asymptotic normal draws), severity incl. GPD tail and threshold (resampling)
-
-Monte Carlo noise is measured separately (same parameters, new seeds). The CAS bootstrap uses common random
-numbers, so its spread is parameter uncertainty only. The motor bootstrap uses fresh seeds per draw and the
-variance that Monte Carlo alone explains is subtracted in the summary.
-"""
+CAS uses common random numbers and fixed reserve inputs. Motor draws
+frequency parameters from the asymptotic fit and refits resampled severities.
+Separate fixed-parameter runs estimate Monte Carlo variability."""
 from __future__ import annotations
 
 from dataclasses import replace
@@ -34,7 +29,7 @@ def _cas_metrics(marginals, reserve_be, reserve_cv, corr, rho_pr, n, seed_prem, 
 
 
 def cas_mc_replicates(base_marginals, reserve_be, reserve_cv, corr, rho_pr, n, n_rep, seed0=10_000) -> pd.DataFrame:
-    """Same parameters, different random numbers: Monte Carlo noise only."""
+    """Repeat the CAS simulation with fixed parameters and different seeds."""
     rows = [_cas_metrics(base_marginals, reserve_be, reserve_cv, corr, rho_pr, n, seed0 + 2 * r, seed0 + 2 * r + 1)
             for r in range(n_rep)]
     return pd.DataFrame(rows)

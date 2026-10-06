@@ -1,10 +1,7 @@
-"""Copula simulation and dependence diagnostics for the loss-ratio portfolio.
+"""Copulas for the CAS loss-ratio portfolio.
 
-Parameterisation used everywhere in the project:
-  Gaussian copula   latent correlation = 2 sin(pi * rho_Spearman / 6)   (exact for the Gaussian copula)
-  Student-t copula  latent correlation = sin(pi * tau_Kendall / 2)      (exact for every elliptical copula)
-A Spearman rho is never used directly as a latent correlation.
-"""
+Gaussian correlations use Spearman: 2 sin(pi * rho / 6).
+Student-t correlations use Kendall: sin(pi * tau / 2)."""
 from __future__ import annotations
 
 from typing import Mapping
@@ -13,7 +10,6 @@ import numpy as np
 from scipy import stats
 
 
-# --- correlation matrices ---------------------------------------------------------------
 
 def latent_from_spearman(rho_s: np.ndarray) -> np.ndarray:
     out = 2.0 * np.sin(np.pi * np.asarray(rho_s, dtype=float) / 6.0)
@@ -49,7 +45,7 @@ def nearest_correlation(a: np.ndarray, max_iter: int = 200, tol: float = 1e-12) 
 
 
 def valid_correlation(r: np.ndarray, tol: float = 1e-8) -> tuple[np.ndarray, dict]:
-    """Return a positive-definite correlation matrix and a report of what, if anything, was changed."""
+    """Check positive definiteness and repair the matrix if needed."""
     r = np.asarray(r, dtype=float)
     min_eig = float(np.linalg.eigvalsh(r).min())
     if min_eig > tol:
@@ -60,7 +56,6 @@ def valid_correlation(r: np.ndarray, tol: float = 1e-8) -> tuple[np.ndarray, dic
                        min_eigenvalue_after=float(np.linalg.eigvalsh(fixed).min()))
 
 
-# --- copula samples (uniform margins) ---------------------------------------------------
 
 def gaussian_copula_uniforms(corr: np.ndarray, n: int, seed: int = 42) -> np.ndarray:
     rng = np.random.default_rng(seed)
@@ -88,7 +83,6 @@ def portfolio_from_uniforms(marginals: Mapping[str, object], u: np.ndarray) -> t
     return per_line, np.sum(list(per_line.values()), axis=0)
 
 
-# --- co-exceedance diagnostics ----------------------------------------------------------
 
 def empirical_coexceedance(a: np.ndarray, b: np.ndarray, q: float) -> tuple[float, int]:
     """P(both pseudo-observations > q) from within-pair ranks, and the number of joint exceedances."""
@@ -112,15 +106,13 @@ def t_coexceedance(rho_latent: float, dof: float, q: float, seed: int = 0) -> fl
     return float(1 - 2 * q + both_below)
 
 
-# --- rank correlations from matched company-years ---------------------------------------
 
 def spearman_matrix(panels: Mapping[str, "pd.DataFrame"], lines: list, min_matched: int = 100,
                     rng: np.random.Generator | None = None) -> np.ndarray:
-    """Spearman matrix from company-year panels (columns GRCODE, AccidentYear and one column per line).
+    """Estimate pairwise Spearman correlations on matched company-years.
 
-    Pairs with fewer than min_matched matches are set to zero. With an rng, the matched rows of every pair are
-    resampled with replacement (bootstrap); the result may then need valid_correlation() after transformation.
-    """
+    Pairs below min_matched are set to zero. Passing rng bootstraps matched
+    rows within each pair. Check positive definiteness after transformation."""
     import pandas as pd
     d = len(lines)
     out = np.eye(d)

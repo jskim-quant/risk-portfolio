@@ -1,81 +1,81 @@
 {
-  "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+  "python": "3.14.3 (v3.14.3:323c59a5e34, Feb  3 2026, 11:41:37) [Clang 16.0.0 (clang-1600.0.26.6)]",
   "packages": {
-    "numpy": "2.4.4",
+    "numpy": "2.4.2",
     "scipy": "1.17.1",
-    "pandas": "3.0.2",
-    "matplotlib": "3.10.9",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
     "statsmodels": "0.15.0",
     "chainladder": "0.10.1",
     "scikit-learn": "1.8.0",
-    "nbformat": "5.11.1",
-    "nbclient": "0.11.0"
+    "nbformat": "5.10.4",
+    "nbclient": "0.10.4"
   },
   "notebooks": [
     {
       "name": "01_frequency_severity_calibration.ipynb",
       "status": "passed",
-      "seconds": 80.3,
+      "seconds": 34.8,
       "code_cells": 21
     },
     {
       "name": "02_aggregate_loss_simulation.ipynb",
       "status": "passed",
-      "seconds": 40.5,
+      "seconds": 19.8,
       "code_cells": 12
     },
     {
       "name": "03_stress_testing.ipynb",
       "status": "passed",
-      "seconds": 7.1,
+      "seconds": 4.3,
       "code_cells": 9
     },
     {
       "name": "04_reinsurance_xol_quota.ipynb",
       "status": "passed",
-      "seconds": 8.3,
+      "seconds": 4.1,
       "code_cells": 10
     },
     {
       "name": "05_multi_line_portfolio.ipynb",
       "status": "passed",
-      "seconds": 14.3,
+      "seconds": 6.2,
       "code_cells": 16
     },
     {
       "name": "06_dependency_copula.ipynb",
       "status": "passed",
-      "seconds": 16.3,
+      "seconds": 8.4,
       "code_cells": 17
     },
     {
       "name": "07_pricing.ipynb",
       "status": "passed",
-      "seconds": 37.7,
+      "seconds": 16.8,
       "code_cells": 12
     },
     {
       "name": "08_reserving.ipynb",
       "status": "passed",
-      "seconds": 4.7,
+      "seconds": 5.0,
       "code_cells": 15
     },
     {
       "name": "09_reserving_uncertainty.ipynb",
       "status": "passed",
-      "seconds": 5.0,
+      "seconds": 2.7,
       "code_cells": 11
     },
     {
       "name": "10_solvency_ii_premium_reserve_risk.ipynb",
       "status": "passed",
-      "seconds": 1.7,
+      "seconds": 1.1,
       "code_cells": 4
     },
     {
       "name": "11_results_summary.ipynb",
       "status": "passed",
-      "seconds": 342.3,
+      "seconds": 147.3,
       "code_cells": 14
     }
   ],

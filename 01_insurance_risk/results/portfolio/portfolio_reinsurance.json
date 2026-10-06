@@ -31,13 +31,13 @@
     {
       "dependence": "Gaussian copula",
       "treaty": "Stop-loss 200% xs 100% premium",
-      "VaR995": 40.005680035597756,
+      "VaR995": 40.00568003559776,
       "ES995": 58.89439438618794,
       "expected_ceded": 2.2067605688008816,
-      "VaR_relief": 22.19656356750415,
+      "VaR_relief": 22.196563567504143,
       "ES_relief": 23.846077552913556,
-      "D_VaR": 0.16564590113419375,
-      "D_K": 0.3632732614174342
+      "D_VaR": 0.16564590113419364,
+      "D_K": 0.3632732614174339
     },
     {
       "dependence": "Independence benchmark",

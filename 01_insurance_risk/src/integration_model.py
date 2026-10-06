@@ -1,13 +1,7 @@
-"""Internal economic-risk aggregation of premium risk and reserve risk on the CAS (USD) basis.
+"""Combine CAS premium losses with reserve deviations (USD).
 
-L_total = L_premium + L_reserve, per line and in total, where
-  L_premium  simulated company-year ultimate loss (loss-ratio marginal x book premium), as in notebooks 05-06
-  L_reserve  deviation of the unpaid reserve from its best estimate (runoff, lognormal moment-matched to Mack)
-
-The deviation has mean zero, so E[L_total] = E[L_premium] and K = VaR - E[L_total].
-This is an internal aggregation with assumed premium-reserve dependence. It is not the Solvency II
-Standard Formula aggregation of notebook 10 (fixed sigma factors, prescribed correlations, one-year horizon).
-"""
+Reserves use a lognormal approximation to Mack runoff uncertainty.
+Premium-reserve dependence is assumed. This is not a Standard Formula SCR."""
 from __future__ import annotations
 
 from typing import Mapping
@@ -26,12 +20,10 @@ def reserve_lognormal(best_estimate: float, cv: float) -> tuple[float, float]:
 
 def coupled_latent(corr: np.ndarray, rho_pr: float, n: int,
                    seed_prem: int = 42, seed_res: int = 43) -> tuple[np.ndarray, np.ndarray]:
-    """Gaussian latent vectors for the premium and the reserve block.
+    """Draw correlated premium and reserve blocks.
 
-    Corr(premium_i, premium_j) = Corr(reserve_i, reserve_j) = corr_ij and Corr(premium_i, reserve_j) = rho_pr * corr_ij
-    (a Kronecker structure, positive semi-definite whenever corr is and |rho_pr| <= 1).
-    The premium block uses the same stream as gaussian_copula_uniforms(corr, n, seed_prem).
-    """
+    Each block has correlation corr; cross-block correlation is rho_pr * corr.
+    The premium draws match gaussian_copula_uniforms with seed_prem."""
     if not -1.0 <= rho_pr <= 1.0:
         raise ValueError("rho_pr must lie in [-1, 1]")
     chol = np.linalg.cholesky(corr)

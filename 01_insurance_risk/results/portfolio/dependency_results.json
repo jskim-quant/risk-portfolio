@@ -104,14 +104,14 @@
   "latent_correlation_gaussian": [
     [
       1.0,
-      0.21411030987905127,
+      0.2141103098790513,
       0.19577548577233114,
       0.08363628192269251,
       0.0,
       0.0
     ],
     [
-      0.21411030987905127,
+      0.2141103098790513,
       1.0,
       0.3071859569797014,
       0.20132212678983266,
@@ -203,12 +203,12 @@
   ],
   "latent_checks": {
     "gaussian": {
-      "min_eigenvalue": 0.6246208768128931,
+      "min_eigenvalue": 0.6246208768128932,
       "corrected": false,
       "frobenius_change": 0.0
     },
     "student_t": {
-      "min_eigenvalue": 0.6163076789777442,
+      "min_eigenvalue": 0.616307678977744,
       "corrected": false,
       "frobenius_change": 0.0
     }
@@ -354,7 +354,7 @@
       "joint_count": 6,
       "expected_count_independence": 3.869999999999998,
       "empirical": 0.015503875968992248,
-      "gaussian_implied": 0.01778503710834245,
+      "gaussian_implied": 0.01778503710834267,
       "t5_implied": 0.02357019335472843,
       "independence": 0.009999999999999995
     },
@@ -365,8 +365,8 @@
       "joint_count": 11,
       "expected_count_independence": 7.319999999999997,
       "empirical": 0.060109289617486336,
-      "gaussian_implied": 0.0564351861470791,
-      "t5_implied": 0.06313708550316532,
+      "gaussian_implied": 0.056435186147078986,
+      "t5_implied": 0.0631370855031651,
       "independence": 0.03999999999999998
     },
     {
@@ -376,8 +376,8 @@
       "joint_count": 6,
       "expected_count_independence": 1.8299999999999992,
       "empirical": 0.03278688524590164,
-      "gaussian_implied": 0.01702214315137862,
-      "t5_implied": 0.02311995842791381,
+      "gaussian_implied": 0.017022143151378843,
+      "t5_implied": 0.0231199584279137,
       "independence": 0.009999999999999995
     },
     {
@@ -388,7 +388,7 @@
       "expected_count_independence": 12.799999999999994,
       "empirical": 0.075,
       "gaussian_implied": 0.04675072298097105,
-      "t5_implied": 0.052043970418074514,
+      "t5_implied": 0.0520439704180744,
       "independence": 0.03999999999999998
     },
     {
@@ -398,8 +398,8 @@
       "joint_count": 11,
       "expected_count_independence": 3.1999999999999984,
       "empirical": 0.034375,
-      "gaussian_implied": 0.012754337300739604,
-      "t5_implied": 0.017963216942021742,
+      "gaussian_implied": 0.012754337300739826,
+      "t5_implied": 0.01796321694202152,
       "independence": 0.009999999999999995
     },
     {
@@ -420,8 +420,8 @@
       "joint_count": 11,
       "expected_count_independence": 3.0599999999999983,
       "empirical": 0.03594771241830065,
-      "gaussian_implied": 0.021957000994544895,
-      "t5_implied": 0.02758659218791837,
+      "gaussian_implied": 0.021957000994545117,
+      "t5_implied": 0.027586592187918257,
       "independence": 0.009999999999999995
     },
     {
@@ -442,8 +442,8 @@
       "joint_count": 12,
       "expected_count_independence": 4.399999999999998,
       "empirical": 0.02727272727272727,
-      "gaussian_implied": 0.01725095028358381,
-      "t5_implied": 0.022716559296470207,
+      "gaussian_implied": 0.017250950283584032,
+      "t5_implied": 0.022716559296470096,
       "independence": 0.009999999999999995
     },
     {
@@ -454,7 +454,7 @@
       "expected_count_independence": 10.319999999999995,
       "empirical": 0.04263565891472868,
       "gaussian_implied": 0.038649041082870594,
-      "t5_implied": 0.044100959807572115,
+      "t5_implied": 0.044100959807572004,
       "independence": 0.03999999999999998
     },
     {
@@ -464,7 +464,7 @@
       "joint_count": 4,
       "expected_count_independence": 2.5799999999999987,
       "empirical": 0.015503875968992248,
-      "gaussian_implied": 0.009473445031074168,
+      "gaussian_implied": 0.00947344503107439,
       "t5_implied": 0.014466705912434374,
       "independence": 0.009999999999999995
     }
@@ -496,11 +496,11 @@
     },
     {
       "scenario": "Student-t copula, dof=5 (Kendall -> latent)",
-      "VaR995": 66.828781542055,
+      "VaR995": 66.82878154205501,
       "ES995": 88.98990585835841,
-      "K": 38.55878525933859,
-      "D_VaR": 0.30491365617314103,
-      "D_K": 0.4319112451311574
+      "K": 38.558785259338606,
+      "D_VaR": 0.3049136561731409,
+      "D_K": 0.4319112451311572
     },
     {
       "scenario": "Student-t copula, dof=10 (Kendall -> latent)",
@@ -513,7 +513,7 @@
     {
       "scenario": "Student-t copula, dof=30 (Kendall -> latent)",
       "VaR995": 62.841611627130234,
-      "ES995": 82.62965284777323,
+      "ES995": 82.62965284777326,
       "K": 34.57161534441382,
       "D_VaR": 0.34638422161562876,
       "D_K": 0.49065444404641745
@@ -539,7 +539,7 @@
     {
       "alpha": 0.25,
       "VaR995": 67.33940880220713,
-      "ES995": 88.49217920072395,
+      "ES995": 88.49217920072398,
       "K": 39.069412519490726,
       "D_VaR": 0.2996026206114031,
       "D_K": 0.42438814494864696
@@ -562,11 +562,11 @@
     },
     {
       "alpha": 1.0,
-      "VaR995": 85.30669280486842,
-      "ES995": 111.08585874464111,
-      "K": 57.036696522152006,
-      "D_VaR": 0.11272484942161265,
-      "D_K": 0.15967513781430842
+      "VaR995": 85.30669280486802,
+      "ES995": 111.0858587446411,
+      "K": 57.036696522151615,
+      "D_VaR": 0.11272484942161676,
+      "D_K": 0.1596751378143142
     }
   ],
   "capital_attribution": [
@@ -574,43 +574,43 @@
       "Line": "ppauto",
       "Premium share": 0.2849750955075197,
       "Expected-loss share": 0.27917169074317294,
-      "Standalone VaR995 share": 0.15021431832413124,
+      "Standalone VaR995 share": 0.15021431832413126,
       "Allocated ES995 share (Euler)": 0.11487636203841549
     },
     {
       "Line": "comauto",
       "Premium share": 0.13583829005271048,
       "Expected-loss share": 0.11745582520687818,
-      "Standalone VaR995 share": 0.08217791581180009,
+      "Standalone VaR995 share": 0.0821779158118001,
       "Allocated ES995 share (Euler)": 0.05900813255036944
     },
     {
       "Line": "wkcomp",
       "Premium share": 0.27552106001257315,
       "Expected-loss share": 0.2988305592654749,
-      "Standalone VaR995 share": 0.40435193627535976,
+      "Standalone VaR995 share": 0.4043519362753598,
       "Allocated ES995 share (Euler)": 0.6911243223381667
     },
     {
       "Line": "othliab",
       "Premium share": 0.09823976014314038,
       "Expected-loss share": 0.08234069278730496,
-      "Standalone VaR995 share": 0.09406999968016691,
+      "Standalone VaR995 share": 0.09406999968016692,
       "Allocated ES995 share (Euler)": 0.03453144631311357
     },
     {
       "Line": "medmal",
       "Premium share": 0.1167367861115141,
       "Expected-loss share": 0.1493771747370641,
-      "Standalone VaR995 share": 0.17281057765884034,
+      "Standalone VaR995 share": 0.17281057765884036,
       "Allocated ES995 share (Euler)": 0.07065406616229339
     },
     {
       "Line": "prodliab",
       "Premium share": 0.08868900817254219,
       "Expected-loss share": 0.07282405726010499,
-      "Standalone VaR995 share": 0.09637525224970157,
-      "Allocated ES995 share (Euler)": 0.02980567059764144
+      "Standalone VaR995 share": 0.09637525224970159,
+      "Allocated ES995 share (Euler)": 0.029805670597641436
     }
   ],
   "rorac": {
@@ -661,8 +661,8 @@
         "premium": 3.668,
         "expected_loss": 2.0602947624758983,
         "expected_profit": 0.5073052375241018,
-        "allocated_capital": 0.40584048923435556,
-        "RORAC": 1.2500113985205519
+        "allocated_capital": 0.4058404892343551,
+        "RORAC": 1.2500113985205534
       },
       {
         "Line": "Portfolio",
@@ -706,9 +706,9 @@
       },
       {
         "Line": "prodliab",
-        "ER 25%": 1.7019130812383017,
-        "ER 30%": 1.2500113985205519,
-        "ER 35%": 0.7981097158028033
+        "ER 25%": 1.7019130812383036,
+        "ER 30%": 1.2500113985205534,
+        "ER 35%": 0.7981097158028042
       },
       {
         "Line": "Portfolio",
@@ -737,7 +737,7 @@
       {
         "wkcomp_marginal": "Burr XII (baseline)",
         "dependence": "Student-t, 5 dof",
-        "VaR995": 66.828781542055,
+        "VaR995": 66.82878154205501,
         "ES995": 88.98990585835841,
         "wkcomp_ES_share": 0.6219973561279305
       },
@@ -746,7 +746,7 @@
         "dependence": "Independence",
         "VaR995": 73.6413771397182,
         "ES995": 90.6104869090023,
-        "wkcomp_ES_share": 0.7604496520190949
+        "wkcomp_ES_share": 0.760449652019095
       },
       {
         "wkcomp_marginal": "Lognormal",
@@ -765,16 +765,16 @@
       {
         "wkcomp_marginal": "Empirical (all years)",
         "dependence": "Independence",
-        "VaR995": 143.1955701456699,
+        "VaR995": 143.19557014566993,
         "ES995": 654.9623345040734,
-        "wkcomp_ES_share": 0.9695898146253755
+        "wkcomp_ES_share": 0.9695898146253754
       },
       {
         "wkcomp_marginal": "Empirical (all years)",
         "dependence": "Gaussian copula",
         "VaR995": 137.17012739788964,
-        "ES995": 621.0202797277332,
-        "wkcomp_ES_share": 0.9640346223810116
+        "ES995": 621.0202797277333,
+        "wkcomp_ES_share": 0.9640346223810115
       },
       {
         "wkcomp_marginal": "Empirical (all years)",
@@ -788,21 +788,21 @@
         "dependence": "Independence",
         "VaR995": 46.38736551765512,
         "ES995": 51.57961843574263,
-        "wkcomp_ES_share": 0.3679378793366401
+        "wkcomp_ES_share": 0.36793787933664013
       },
       {
         "wkcomp_marginal": "Burr XII, AY2001 excluded",
         "dependence": "Gaussian copula",
         "VaR995": 48.13321264553969,
         "ES995": 53.694930114458344,
-        "wkcomp_ES_share": 0.3674121563136723
+        "wkcomp_ES_share": 0.36741215631367236
       },
       {
         "wkcomp_marginal": "Burr XII, AY2001 excluded",
         "dependence": "Student-t, 5 dof",
         "VaR995": 52.37394819429052,
-        "ES995": 61.322999713837355,
-        "wkcomp_ES_share": 0.33246318429112975
+        "ES995": 61.322999713837376,
+        "wkcomp_ES_share": 0.3324631842911298
       },
       {
         "wkcomp_marginal": "Empirical, AY2001 excluded",
@@ -814,7 +814,7 @@
       {
         "wkcomp_marginal": "Empirical, AY2001 excluded",
         "dependence": "Gaussian copula",
-        "VaR995": 48.32563603987086,
+        "VaR995": 48.32563603987087,
         "ES995": 52.57503989810795,
         "wkcomp_ES_share": 0.3491927764458614
       },
@@ -829,7 +829,7 @@
     "baseline_var995": 62.202243603101905,
     "marginal_range": 89.03691475234996,
     "marginal_range_ex_empirical": 27.048238203707534,
-    "dependence_range_fitted": 6.37901789057161,
+    "dependence_range_fitted": 6.379017890571625,
     "dependence_range_extended": 35.66009697790344
   },
   "portfolio_var995_gaussian": 62.202243603101905,

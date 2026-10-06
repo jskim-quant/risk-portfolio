@@ -1,0 +1,150 @@
+{
+  "status": "passed",
+  "baseline_commit": "57b2a1d3bca85a4f24d3b4e4e554d68b6c50d69d",
+  "source_hash": "24a437093d07a795936d7d4791ee1cb0fd8ea8a9632a6df0906a31a3f9cdfbd0",
+  "numeric_tolerance": {
+    "rtol": 1e-07,
+    "atol": 1e-08
+  },
+  "counts": {
+    "numeric_values": 1419,
+    "numeric_changes": 188,
+    "text_changes": 6,
+    "png_figures": 32,
+    "code_cells": 141
+  },
+  "largest_scaled_numeric_difference": [
+    4.501584429983706e-08,
+    "parameter_risk.json.motor.summary[2].parameter_sd_ex_mc"
+  ],
+  "figures": [
+    {
+      "notebook": "01_frequency_severity_calibration.ipynb",
+      "cell_index": 8
+    },
+    {
+      "notebook": "01_frequency_severity_calibration.ipynb",
+      "cell_index": 17
+    },
+    {
+      "notebook": "01_frequency_severity_calibration.ipynb",
+      "cell_index": 21
+    },
+    {
+      "notebook": "01_frequency_severity_calibration.ipynb",
+      "cell_index": 25
+    },
+    {
+      "notebook": "01_frequency_severity_calibration.ipynb",
+      "cell_index": 28
+    },
+    {
+      "notebook": "01_frequency_severity_calibration.ipynb",
+      "cell_index": 31
+    },
+    {
+      "notebook": "01_frequency_severity_calibration.ipynb",
+      "cell_index": 32
+    },
+    {
+      "notebook": "02_aggregate_loss_simulation.ipynb",
+      "cell_index": 4
+    },
+    {
+      "notebook": "02_aggregate_loss_simulation.ipynb",
+      "cell_index": 9
+    },
+    {
+      "notebook": "02_aggregate_loss_simulation.ipynb",
+      "cell_index": 14
+    },
+    {
+      "notebook": "03_stress_testing.ipynb",
+      "cell_index": 7
+    },
+    {
+      "notebook": "03_stress_testing.ipynb",
+      "cell_index": 12
+    },
+    {
+      "notebook": "04_reinsurance_xol_quota.ipynb",
+      "cell_index": 13
+    },
+    {
+      "notebook": "04_reinsurance_xol_quota.ipynb",
+      "cell_index": 15
+    },
+    {
+      "notebook": "04_reinsurance_xol_quota.ipynb",
+      "cell_index": 16
+    },
+    {
+      "notebook": "05_multi_line_portfolio.ipynb",
+      "cell_index": 9
+    },
+    {
+      "notebook": "05_multi_line_portfolio.ipynb",
+      "cell_index": 23
+    },
+    {
+      "notebook": "06_dependency_copula.ipynb",
+      "cell_index": 4
+    },
+    {
+      "notebook": "06_dependency_copula.ipynb",
+      "cell_index": 13
+    },
+    {
+      "notebook": "06_dependency_copula.ipynb",
+      "cell_index": 17
+    },
+    {
+      "notebook": "06_dependency_copula.ipynb",
+      "cell_index": 20
+    },
+    {
+      "notebook": "07_pricing.ipynb",
+      "cell_index": 10
+    },
+    {
+      "notebook": "07_pricing.ipynb",
+      "cell_index": 16
+    },
+    {
+      "notebook": "07_pricing.ipynb",
+      "cell_index": 22
+    },
+    {
+      "notebook": "08_reserving.ipynb",
+      "cell_index": 10
+    },
+    {
+      "notebook": "08_reserving.ipynb",
+      "cell_index": 22
+    },
+    {
+      "notebook": "09_reserving_uncertainty.ipynb",
+      "cell_index": 7
+    },
+    {
+      "notebook": "09_reserving_uncertainty.ipynb",
+      "cell_index": 11
+    },
+    {
+      "notebook": "09_reserving_uncertainty.ipynb",
+      "cell_index": 14
+    },
+    {
+      "notebook": "10_solvency_ii_premium_reserve_risk.ipynb",
+      "cell_index": 9
+    },
+    {
+      "notebook": "11_results_summary.ipynb",
+      "cell_index": 9
+    },
+    {
+      "notebook": "11_results_summary.ipynb",
+      "cell_index": 18
+    }
+  ]
+}

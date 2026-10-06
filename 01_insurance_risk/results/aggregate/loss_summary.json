@@ -22,7 +22,7 @@
     "sampler_ks_pvalue": 0.5876698706804666,
     "capped_mean_z": [
       -1.423597526813554,
-      -1.374210058040063,
+      -1.3742100580400631,
       -1.7546587605155366
     ],
     "seed42_percentile_in_500k_replicates": 0.975,
@@ -34,7 +34,7 @@
         "p05": -0.19895975081421266,
         "p95": 0.4053009173234202,
         "share_above_analytic": 0.2,
-        "mean_over_replicates": -0.032214023805396674
+        "mean_over_replicates": -0.03221402380539667
       },
       {
         "quantity": "E[X] per claim (N claims)",
@@ -43,7 +43,7 @@
         "p05": -0.18788334098747794,
         "p95": 0.06776437246928854,
         "share_above_analytic": 0.125,
-        "mean_over_replicates": -0.09759386087869576
+        "mean_over_replicates": -0.09759386087869575
       },
       {
         "quantity": "E[X] per claim (N claims)",
@@ -52,14 +52,14 @@
         "p05": -0.16370049674620427,
         "p95": 0.12784846693496815,
         "share_above_analytic": 0.175,
-        "mean_over_replicates": -0.06436289667273251
+        "mean_over_replicates": -0.06436289667273255
       },
       {
         "quantity": "E[X] per claim (N claims)",
         "N": 1000000,
         "median": -0.10425819650883039,
         "p05": -0.15222212578344463,
-        "p95": 0.10634107809768886,
+        "p95": 0.10634107809768888,
         "share_above_analytic": 0.1,
         "mean_over_replicates": -0.07784576099167069
       },
@@ -70,16 +70,16 @@
         "p05": -0.12923429783935242,
         "p95": 0.24996424341516682,
         "share_above_analytic": 0.175,
-        "mean_over_replicates": -0.04087021549579374
+        "mean_over_replicates": -0.040870215495793734
       },
       {
         "quantity": "E[S] per policy-year (N years)",
         "N": 100000,
-        "median": -0.1770043307728219,
+        "median": -0.17700433077282185,
         "p05": -0.259416378266615,
-        "p95": 0.22102266745374102,
+        "p95": 0.22102266745374125,
         "share_above_analytic": 0.15,
-        "mean_over_replicates": -0.03210088144227387
+        "mean_over_replicates": -0.032100881442273854
       },
       {
         "quantity": "E[S] per policy-year (N years)",
@@ -97,12 +97,12 @@
         "p05": -0.21706570012165521,
         "p95": 0.02814341026653567,
         "share_above_analytic": 0.125,
-        "mean_over_replicates": -0.11710167333629237
+        "mean_over_replicates": -0.11710167333629236
       },
       {
         "quantity": "E[S] per policy-year (N years)",
         "N": 1000000,
-        "median": -0.11657731753277095,
+        "median": -0.11657731753277084,
         "p05": -0.19914118709380632,
         "p95": 0.17886842466196942,
         "share_above_analytic": 0.175,
@@ -115,7 +115,7 @@
         "p05": -0.1773530651922204,
         "p95": 0.18426576158151292,
         "share_above_analytic": 0.15,
-        "mean_over_replicates": -0.08979449457671082
+        "mean_over_replicates": -0.0897944945767108
       }
     ]
   },

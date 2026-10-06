@@ -1,4 +1,4 @@
-"""Shared paths, plotting defaults, and generated-artifact freshness checks."""
+"""Project paths, plot settings and result freshness checks."""
 from pathlib import Path
 import hashlib
 import json
@@ -31,7 +31,7 @@ MANIFEST_PATH = VALIDATION_DIR / 'manifest.json'
 
 
 def result_path(name):
-    """Location of a generated result file, e.g. results/calibration/calibrated_model.json."""
+    """Return the path for a registered result file."""
     return RESULTS_DIR / RESULT_FILES[name][0] / name
 
 
@@ -39,7 +39,7 @@ def file_hash(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 def source_hash():
-    """Any edit to data or code counts as stale and needs a full rerun."""
+    """Hash source files, notebook code and input data."""
     h = hashlib.sha256()
     for path in sorted(DATA_DIR.glob('*.csv')) + sorted((ROOT / 'src').glob('*.py')):
         h.update(path.name.encode()); h.update(path.read_bytes())
@@ -76,9 +76,10 @@ def setup():
     for subdir in {d for d, _ in RESULT_FILES.values()}:
         (RESULTS_DIR / subdir).mkdir(parents=True, exist_ok=True)
     VALIDATION_DIR.mkdir(parents=True, exist_ok=True)
-    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10,
-        'axes.titlesize': 12, 'axes.labelsize': 10, 'legend.fontsize': 9,
-        'figure.figsize': (9, 5), 'figure.dpi': 110, 'axes.grid': True,
+    font_keys = ('font.family', 'font.size', 'axes.titlesize', 'axes.labelsize',
+                 'legend.fontsize', 'xtick.labelsize', 'ytick.labelsize')
+    plt.rcParams.update({key: plt.rcParamsDefault[key] for key in font_keys})
+    plt.rcParams.update({'figure.figsize': (9, 5), 'figure.dpi': 110, 'axes.grid': True,
         'grid.alpha': 0.2, 'axes.spines.top': False, 'axes.spines.right': False,
         'axes.prop_cycle': cycler(color=['#0072B2', '#E69F00', '#009E73', '#D55E00', '#CC79A7', '#56B4E9'])})
     pd.set_option('display.float_format', lambda value: f'{value:,.3f}')
