@@ -6,3 +6,4 @@ __pycache__/
 
 # 02: raw market data is rebuilt by scripts (licence terms)
 02_multi_asset_portfolio_risk/data/raw/
+02_multi_asset_portfolio_risk/data/processed/

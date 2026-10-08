@@ -29,7 +29,8 @@ Common sample starts 2007-04-11 (HYG); with a 3-year window the first out-of-sam
 ```
 data/metadata/   sources, series dictionary, stress periods, validation report (raw data not committed)
 scripts/         download (run_all.sh) and raw-data validation (90_validate_raw.py)
-src/             data_loader.py
+src/             data_loader.py · returns.py (synthetic bonds, FX hedge) · universe.py (EUR return matrix)
+tests/           unit tests for return construction
 notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 optimisation ·
                  05 walk-forward · 06 VaR/ES backtesting · 07 stress · 08 results · 09 ALM
 ```
@@ -40,8 +41,9 @@ notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 opti
 |---|---|
 | Raw data download + validation | done |
 | 01 Data pipeline | done |
-| 02 Return construction (synthetic UST vs IEF validation first) | next |
-| 03–09 | planned |
+| 02 Return construction — synthetic UST 7–10Y tracks IEF (corr 0.993, TE 0.78% p.a.) | done |
+| 03 Risk estimation (Sample, Rolling, EWMA, Ledoit-Wolf, GARCH-CCC) | next |
+| 04–09 | planned |
 
 ## Reproduce
 
@@ -49,4 +51,5 @@ notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 opti
 pip install -r requirements.txt
 bash scripts/run_all.sh            # + manual downloads, see data/metadata/README.md
 python scripts/90_validate_raw.py
+python -m pytest tests
 ```
