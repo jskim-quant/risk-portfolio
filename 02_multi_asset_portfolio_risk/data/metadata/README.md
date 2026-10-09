@@ -35,7 +35,7 @@ plus the manual downloads below, then validate with `python scripts/90_validate_
 
 | Issue | Rule |
 |---|---|
-| HYG starts 2007-04-11 | common sample start; first out-of-sample month 2010-04 (3y window); GFC is in-sample stress only |
+| HYG starts 2007-04-11 | common sample start; first out-of-sample month 2010-05 (3y window); GFC is in-sample stress only |
 | US / EUR / JP calendars differ (only 4,543 common days since 2007-05) | estimate covariances on weekly data; never inner-join daily data globally |
 | ECB 30Y fitted yields jump (e.g. 2010-10-15) | do not use 30Y for synthetic bonds; treat with care in curve PCA / ALM |
 | JGB short tenors jump before 1986 | `load_jgb_curve()` starts at 1986-07 |

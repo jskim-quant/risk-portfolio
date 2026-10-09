@@ -22,7 +22,7 @@ historical stress tests and an asset–liability (insurance) extension.
 | Credit | LQD, HYG | hedged |
 | Real assets | GLD, DBC | unhedged |
 
-Common sample starts 2007-04-11 (HYG); with a 3-year window the first out-of-sample month is 2010-04.
+Common sample starts 2007-04-11 (HYG); with a 3-year window the first out-of-sample month is 2010-05.
 
 ## Structure
 
@@ -30,7 +30,9 @@ Common sample starts 2007-04-11 (HYG); with a 3-year window the first out-of-sam
 data/metadata/   sources, series dictionary, stress periods, validation report (raw data not committed)
 scripts/         download (run_all.sh) and raw-data validation (90_validate_raw.py)
 src/             data_loader.py · returns.py (synthetic bonds, FX hedge) · universe.py (EUR return matrix)
-tests/           unit tests for return construction
+                 risk.py (5 covariance estimators, GARCH MLE, QLIKE, Diebold–Mariano) · evaluate.py
+                 optimize.py (ADMM QP/LP, min-variance, risk parity, CVaR, weight paths)
+tests/           unit tests for returns, covariance estimators and optimisers
 notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 optimisation ·
                  05 walk-forward · 06 VaR/ES backtesting · 07 stress · 08 results · 09 ALM
 ```
@@ -42,8 +44,10 @@ notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 opti
 | Raw data download + validation | done |
 | 01 Data pipeline | done |
 | 02 Return construction — synthetic UST 7–10Y tracks IEF (corr 0.993, TE 0.78% p.a.) | done |
-| 03 Risk estimation (Sample, Rolling, EWMA, Ledoit-Wolf, GARCH-CCC) | next |
-| 04–09 | planned |
+| 03 Risk estimation — GARCH-CCC is the only estimator beating Sample (DM p = 0.03) | done |
+| 04 Portfolio optimisation — numpy ADMM / CCD solvers, monthly target weights 2010-04 → 2026-08 | done |
+| 05 Walk-forward backtest (drift, turnover, costs, vol targeting) | next |
+| 06–09 | planned |
 
 ## Reproduce
 
