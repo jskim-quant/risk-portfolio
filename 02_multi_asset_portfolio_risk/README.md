@@ -13,6 +13,15 @@ historical stress tests and an asset–liability (insurance) extension.
 5. Which VaR model passes Kupiec / Christoffersen backtests?
 6. How does the optimal allocation change once insurance liabilities are added (surplus optimisation)?
 
+## Answers so far
+
+| # | Answer (2010-05 → 2026-09, EUR, 10bp costs) |
+|---|---|
+| 1 | GARCH-CCC forecasts best (only estimator beating Sample, DM p = 0.03) — but gives the **worst** portfolios (highest turnover); Sample/Rolling covariances are best for allocation |
+| 2–3 | 60/40 Sharpe 0.79, EW 0.71 (n.s.); MinVar 0.11, CVaR 0.33, Risk Parity 0.46 — all significantly below 60/40 (Memmel p ≤ 0.03), also after vol targeting (RP* 0.54) |
+| 4 | 2022: 60/40 −14%, EW −10%, vol-targeted RP −30%, MinVar* −37% — the SPY–IEF correlation turned positive and leverage on bonds amplified the loss |
+| 5 | Filtered historical simulation: correct exception rates at 95% and 99%, ES ratio 1.03, no Basel red zone for 60/40 and EW |
+
 ## Universe (v1, EUR base)
 
 | Sleeve | Assets | FX |
@@ -32,7 +41,8 @@ scripts/         download (run_all.sh) and raw-data validation (90_validate_raw.
 src/             data_loader.py · returns.py (synthetic bonds, FX hedge) · universe.py (EUR return matrix)
                  risk.py (5 covariance estimators, GARCH MLE, QLIKE, Diebold–Mariano) · evaluate.py
                  optimize.py (ADMM QP/LP, min-variance, risk parity, CVaR, weight paths)
-tests/           unit tests for returns, covariance estimators and optimisers
+                 backtest.py (daily drift, turnover, costs, leverage, Memmel test) · var.py (5 VaR/ES models, Kupiec, Christoffersen, traffic light)
+tests/           21 unit tests: returns, estimators, optimisers, backtest engine (incl. look-ahead test), VaR backtests
 notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 optimisation ·
                  05 walk-forward · 06 VaR/ES backtesting · 07 stress · 08 results · 09 ALM
 ```
@@ -46,8 +56,10 @@ notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 opti
 | 02 Return construction — synthetic UST 7–10Y tracks IEF (corr 0.993, TE 0.78% p.a.) | done |
 | 03 Risk estimation — GARCH-CCC is the only estimator beating Sample (DM p = 0.03) | done |
 | 04 Portfolio optimisation — numpy ADMM / CCD solvers, monthly target weights 2010-04 → 2026-08 | done |
-| 05 Walk-forward backtest (drift, turnover, costs, vol targeting) | next |
-| 06–09 | planned |
+| 05 Walk-forward backtest — 60/40 Sharpe 0.79; every risk-based rule significantly worse; vol-targeted RP −30% in 2022 | done |
+| 06 VaR/ES backtesting — FHS is the only model passing at 99% (Kupiec, Basel green) | done |
+| 07 Historical stress tests | next |
+| 08–09 | planned |
 
 ## Reproduce
 

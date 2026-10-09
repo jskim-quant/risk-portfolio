@@ -198,3 +198,24 @@ def weight_paths(fc: dict, weekly: pd.DataFrame, estimator: str = "GARCH-CCC", c
             df.to_csv(Path(cache_dir) / f"weights_{m.replace('/', '')}.csv")
         out[m] = df
     return out
+
+
+def covariance_rule_paths(fc: dict, estimators: list[str], cap: float = 0.30,
+                          cache_dir=None) -> dict[tuple[str, str], pd.DataFrame]:
+    """MinVar and RiskParity target weights for each covariance estimator (cached CSV per pair)."""
+    from pathlib import Path
+    out = {}
+    for e in estimators:
+        for m in ("MinVar", "RiskParity"):
+            p = Path(cache_dir) / f"{e}_{m}.csv" if cache_dir is not None else None
+            if p is not None and p.exists():
+                out[(e, m)] = pd.read_csv(p, index_col=0, parse_dates=True)
+                continue
+            rows = [min_variance(S, cap) if m == "MinVar" else risk_parity(S) for S in fc["cov1w"][e]]
+            df = pd.DataFrame(rows, index=fc["dates"], columns=fc["assets"])
+            df.index.name = "date"
+            if p is not None:
+                p.parent.mkdir(parents=True, exist_ok=True)
+                df.to_csv(p)
+            out[(e, m)] = df
+    return out
