@@ -26,9 +26,9 @@ remaining gaps (§9) for the next commit.
 | `src/universe.py` | added | `ASSETS`, `SLEEVE`, `RULES = {"daily": "D", "weekly": "W-WED", "monthly": "ME"}`, `synthetic_indices()`, `eur_returns(freq, hedge_bonds, extra)` |
 | `tests/test_returns.py` | added | 6 unit tests (§7.1) |
 | `notebooks/02_return_construction.ipynb` | executed | method, validation gate, EUR/JGB synthetics, hedging, universe stats, CSV export |
-| `scripts/91_validate_processed.py` | **next commit** | processed-data checks (§6) |
-| `tests/test_universe.py` | **next commit** | processed-data invariants (§7.2) |
-| `data/metadata/processed_schema.md` | **next commit** | CSV schema (§5) |
+| `scripts/91_validate_processed.py` | added (gap commit) | processed-data checks (§6) via `universe.check_processed` |
+| `tests/test_universe.py` | added (gap commit) | 5 processed-data tests (§7.2) |
+| `data/metadata/processed_schema.md` | added (gap commit) | CSV schema and missing-value policy (§5) |
 
 ## 3. Formulas
 
@@ -128,6 +128,7 @@ assert gate["corr"] >= 0.97 and abs(gate["beta (a on b)"] - 1) <= 0.10 and gate[
 | index | `date` (ISO), increasing, unique | same, all Wednesdays | same, all month-ends |
 | columns (order) | `SPY, VGK, EWJ, SHY, IEF, TLT, EUR_CORE7_10_SYN, JGB7_10_SYN, LQD, HYG, GLD, DBC, EUR_ALL7_10_SYN` | same | same |
 | values | simple returns in EUR, decimals | same | same |
+| first row | 1999-01-05 | 1999-01-13 | 1999-02-28 |
 | common sample | from 2007-04-12 | from 2007-04-18 | from 2007-05-31 |
 | NaN inside common sample | allowed = market closed that day (US holidays etc.) | none | none |
 | last row | last data day | last complete week (≤ min last observation) | last complete month |
@@ -148,7 +149,7 @@ Measured on the current files; each line is a direct assert.
 | P6 | unhedged sleeves identical in hedged and unhedged files | ✓ (`np.allclose`) |
 | P7 | unhedged columns: monthly return == compounded daily return | ✓ (max \|diff\| 2e-15) |
 | P8 | hedged columns: mean(monthly − compounded daily) within ±2bp/month | IEF 0.02bp, JGB −0.68bp, HYG 1.34bp ✓ |
-| P9 | plausibility: max \|monthly\| < 25% (max today: DBC 18.4%) | ✓ |
+| P9 | plausibility: max \|r\| < 20% daily (EWJ +15.8% on 2008-10-13), 25% weekly/monthly (DBC 18.4%) | ✓ |
 | P10 | last weekly/monthly row ≤ last observation of every input | ✓ |
 
 ```python
@@ -166,7 +167,7 @@ def check(df: pd.DataFrame, freq: str) -> None:
         assert not core.isna().all(axis=1).any()
     else:
         assert core.notna().all().all()
-    assert core.abs().max().max() < {"daily": 0.15, "weekly": 0.25, "monthly": 0.25}[freq]
+    assert core.abs().max().max() < {"daily": 0.20, "weekly": 0.25, "monthly": 0.25}[freq]
 ```
 
 ## 7. Tests
@@ -182,7 +183,7 @@ def check(df: pd.DataFrame, freq: str) -> None:
 | `test_hedged_return_without_fx_or_rate_moves` | equal rates, constant FX → hedged = local |
 | `test_hedge_removes_fx_on_principal` | flat asset, foreign currency −10% → hedged 0, unhedged < −9% |
 
-### 7.2 Next commit (`tests/test_universe.py`)
+### 7.2 Gap commit (`tests/test_universe.py`, all passing)
 
 | Test | Assertion |
 |---|---|
@@ -202,14 +203,14 @@ def check(df: pd.DataFrame, freq: str) -> None:
 6. `eur_returns(freq)`; drop incomplete last period (bug found: October 2026 counted as a full month).
 7. Export six CSVs; notebook 02 executed and committed.
 
-## 9. Gaps → next commit
+## 9. Gaps — closed in the gap commit
 
-| # | Gap (found while writing this spec) | Fix |
+| # | Gap (found while writing this spec) | Fix (status) |
 |---|---|---|
-| G1 | CSV index has no name (blank header) | `df.index.name = "date"` before `to_csv` |
-| G2 | hedged files start in 1986 with 3,151 leading all-NaN daily rows; unhedged start 1999 | drop leading all-NaN rows in `eur_returns` |
-| G3 | daily holiday NaN policy is implicit (consumers fill with 0) | document in `processed_schema.md`; check P5 |
-| G4 | no automated processed-data checks | `scripts/91_validate_processed.py` + `tests/test_universe.py` |
+| G1 | CSV index has no name (blank header) | `df.index.name = "date"` in `eur_returns` ✓ |
+| G2 | hedged files start in 1986 with 3,151 leading all-NaN daily rows; unhedged start 1999 | leading all-NaN rows dropped; hedged and unhedged now both start 1999-01-05 with identical row counts ✓ |
+| G3 | daily holiday NaN policy is implicit (consumers fill with 0) | documented in `data/metadata/processed_schema.md`; check P5 ✓ |
+| G4 | no automated processed-data checks | `scripts/91_validate_processed.py` (exit code 1 on failure) + `tests/test_universe.py` ✓ |
 | G5 | hedged daily vs monthly differ by up to 133bp in a month (HYG, Oct 2008) | expected (P&L stays unhedged within the roll period); bound by \|R_fc\|·\|S0/S1 − 1\| and documented |
 
-Commit: `fix: processed return schema, leading-NaN trim and validation checks (notebook 02)`.
+Before the fix the checks reported exactly G1 and G2 on the old files; after rebuilding all six files pass.

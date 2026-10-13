@@ -37,12 +37,13 @@ Common sample starts 2007-04-11 (HYG); with a 3-year window the first out-of-sam
 
 ```
 data/metadata/   sources, series dictionary, stress periods, validation report (raw data not committed)
-scripts/         download (run_all.sh) and raw-data validation (90_validate_raw.py)
+scripts/         download (run_all.sh), raw-data validation (90_validate_raw.py), processed-data validation (91_validate_processed.py)
+docs/            design specs (design_02_return_construction.md)
 src/             data_loader.py · returns.py (synthetic bonds, FX hedge) · universe.py (EUR return matrix)
                  risk.py (5 covariance estimators, GARCH MLE, QLIKE, Diebold–Mariano) · evaluate.py
                  optimize.py (ADMM QP/LP, min-variance, risk parity, CVaR, weight paths)
                  backtest.py (daily drift, turnover, costs, leverage, Memmel test) · var.py (5 VaR/ES models, Kupiec, Christoffersen, traffic light)
-tests/           21 unit tests: returns, estimators, optimisers, backtest engine (incl. look-ahead test), VaR backtests
+tests/           26 unit tests: returns, estimators, optimisers, backtest engine (incl. look-ahead test), VaR backtests, processed-data invariants
 notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 optimisation ·
                  05 walk-forward · 06 VaR/ES backtesting · 07 stress · 08 results · 09 ALM
 ```
@@ -67,5 +68,6 @@ notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 opti
 pip install -r requirements.txt
 bash scripts/run_all.sh            # + manual downloads, see data/metadata/README.md
 python scripts/90_validate_raw.py
+python scripts/91_validate_processed.py   # after notebook 02
 python -m pytest tests
 ```

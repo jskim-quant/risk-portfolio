@@ -24,6 +24,7 @@ plus the manual downloads below, then validate with `python scripts/90_validate_
 | `metadata/series_dictionary.csv` | what each series is, its role and FX treatment |
 | `metadata/stress_periods.csv` | fixed stress windows used in notebook 07 |
 | `metadata/validation_report.md` | output of `scripts/90_validate_raw.py` |
+| `metadata/processed_schema.md` | layout, column order and missing-value policy of the processed EUR return files |
 
 ## Data roles
 
