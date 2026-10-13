@@ -21,6 +21,7 @@ historical stress tests and an asset–liability (insurance) extension.
 | 2–3 | 60/40 Sharpe 0.79, EW 0.71 (n.s.); MinVar 0.11, CVaR 0.33, Risk Parity 0.46 — all significantly below 60/40 (Memmel p ≤ 0.03), also after vol targeting (RP* 0.54) |
 | 4 | 2022: 60/40 −14%, EW −10%, vol-targeted RP −30%, MinVar* −37% — the SPY–IEF correlation turned positive and leverage on bonds amplified the loss |
 | 5 | Filtered historical simulation: correct exception rates at 95% and 99%, ES ratio 1.03, no Basel red zone for 60/40 and EW |
+| stress | Replaying today's portfolios: GFC 60/40 −24%, vol-targeted RP −2%; 2022 RP* −31% vs 60/40 −15% — the same bond leverage that protected in 2008 failed in 2022 |
 
 ## Universe (v1, EUR base)
 
@@ -43,7 +44,8 @@ src/             data_loader.py · returns.py (synthetic bonds, FX hedge) · uni
                  risk.py (5 covariance estimators, GARCH MLE, QLIKE, Diebold–Mariano) · evaluate.py
                  optimize.py (ADMM QP/LP, min-variance, risk parity, CVaR, weight paths)
                  backtest.py (daily drift, turnover, costs, leverage, Memmel test) · var.py (5 VaR/ES models, Kupiec, Christoffersen, traffic light)
-tests/           26 unit tests: returns, estimators, optimisers, backtest engine (incl. look-ahead test), VaR backtests, processed-data invariants
+                 stress.py (buy-and-hold scenario replay with exact P&L attribution)
+tests/           29 unit tests: returns, estimators, optimisers, backtest engine (incl. look-ahead test), VaR backtests, processed-data invariants, stress replay
 notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 optimisation ·
                  05 walk-forward · 06 VaR/ES backtesting · 07 stress · 08 results · 09 ALM
 ```
@@ -59,8 +61,9 @@ notebooks/       01 data pipeline · 02 returns · 03 risk estimation · 04 opti
 | 04 Portfolio optimisation — numpy ADMM / CCD solvers, monthly target weights 2010-04 → 2026-08 | done |
 | 05 Walk-forward backtest — 60/40 Sharpe 0.79; every risk-based rule significantly worse; vol-targeted RP −30% in 2022 | done |
 | 06 VaR/ES backtesting — FHS is the only model passing at 99% (Kupiec, Basel green) | done |
-| 07 Historical stress tests | next |
-| 08–09 | planned |
+| 07 Historical stress tests — replay of today's portfolios (incl. GFC) + realised OOS windows | done |
+| 08 Results summary | next |
+| 09 ALM (v1.5) | planned |
 
 ## Reproduce
 
