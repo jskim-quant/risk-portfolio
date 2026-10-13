@@ -4,21 +4,6 @@ I wanted to see which assumptions move an insurance capital estimate most: claim
 
 The project is eleven notebooks on top of a small `src/` package. They use two public data sets, French motor policies and US Schedule P loss development. These are two separate case studies, not one company, so the currencies (EUR and USD) are never added together.
 
-## Architecture
-
-```
-Claims (01 calibration) -> Aggregate loss (02) -> Stress (03) -> Reinsurance (04)
-                                   |
-                                   +-> Pricing (07)
-
-CAS loss ratios  -> Multi-line portfolio (05) -> Dependence and copulas (06)
-CAS paid triangles -> Reserving (08) -> Reserve uncertainty (09)
-Standard Formula illustration (10)
-
-Everything above -> Integrated risk, parameter risk, model-risk table (11)
-```
-
-Each notebook saves its results under `results/<stage>/`. Before loading them, `src/project.py` checks their contents against a manifest and the current CSVs, `src/*.py` files and notebook code cells. Missing or changed files trigger a rerun error. README text, notebook Markdown and tests are outside this source hash.
 
 ## Data
 
