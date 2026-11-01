@@ -73,7 +73,7 @@ def test_spread_accrues_over_weekend_gap() -> None:
     res = B.run_backtest(daily, _tg([[1.5, 0.0]]), _cash(0.0), 0, end=IDX[-1], funding_spread_bps=360.0)
     L = res.ledger
     fc = L.funding_cost / ((L.nav_open - L.tc) * L.borrowed)          # rate per unit borrowed
-    gaps = np.diff(np.r_[IDX[0].value, res.net.index.asi8]) / 86_400e9
+    gaps = np.asarray((res.net.index - res.net.index.insert(0, IDX[0])[:-1]) / pd.Timedelta(days=1))
     assert np.allclose(fc.to_numpy(), 0.036 * gaps / 360, atol=1e-16)
 
 

@@ -95,7 +95,7 @@ def run_backtest(daily: pd.DataFrame, targets: pd.DataFrame, cash: pd.Series,
     days = daily.index[(daily.index > targets.index[0]) & (daily.index <= end)]
     R = daily.loc[days, targets.columns].fillna(0.0).to_numpy()
     cr = cash.reindex(days).fillna(0.0).to_numpy()
-    gap = np.diff(np.r_[targets.index[0].value, days.asi8]) / 86_400e9
+    gap = np.asarray((days - days.insert(0, targets.index[0])[:-1]) / pd.Timedelta(days=1))
     sp = funding_spread_bps / 1e4 * gap / 360
     tdates = targets.index
     T = targets.to_numpy()
